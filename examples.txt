@@ -1,0 +1,6 @@
+https://github.com/ivelasq/mortgage-dashboard/tree/main
+https://github.com/gadenbuie/mynorfolk-dash/tree/main
+https://github.com/mine-cetinkaya-rundel/ld-dashboard
+https://github.com/subugoe/hoaddash/tree/main
+https://github.com/CozminaSecula/dashboard
+https://github.com/mine-cetinkaya-rundel/quarto-dashboards-pydata

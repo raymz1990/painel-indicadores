@@ -1,0 +1,25 @@
+project: 
+  type: website
+  title: Painel de Indicadores
+
+website:
+  navbar:
+    pinned: true
+    logo: "static/logo.svg"
+    background: primary
+
+  page-footer:
+    left: |
+      <b>© 2024 Raymundo Eduardo Pilz</b> | 
+      powered by [quarto](https://quarto.org)
+
+  back-to-top-navigation: true
+    
+format:
+  html:
+    theme: 
+     light: [flatly, assets/theme/theme-light.scss]
+     dark: [flatly, assets/theme/theme-dark.scss]
+    css: 
+      - assets/css/styles.css
+    toc: true

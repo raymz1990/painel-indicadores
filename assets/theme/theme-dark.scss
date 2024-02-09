@@ -1,0 +1,57 @@
+/*-- scss:defaults --*/
+$body-bg:                   #2a2a2a !default;
+$body-color:                #eaeaea !default;
+$link-color:                #dddddd !default;
+
+$navbar-bg:                 #333333 !default;
+$navbar-fg:                 #eaeaea !default;
+$navbar-hl:                 #eaeaea !default;
+
+
+
+$font-family-sans-serif: 'Montserrat';
+$font-family-monospace: 'Montserrat';
+
+/*-- scss:rules --*/
+@font-face {
+    font-family: 'Montserrat';
+    src: url('static/fonts/Montserrat-Regular.ttf') format('ttf'),
+         url('static/fonts/Montserrat-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('static/fonts/Montserrat-Regular.ttf') format('ttf'),
+        url('static/fonts/Montserrat-Regular.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@media screen and (min-width: 56em) {
+  html {
+    font-size: 1.1em;
+  }
+}
+
+/*footer*/
+.nav-footer{
+  border-top: 0px !important;
+  background-color:#333333;
+  color: #fdfbf7;
+}
+
+/*link*/
+.listing-title{
+  color: #eaeaea;
+}
+
+.listing-title:hover {
+  text-decoration:underline;
+  color:#dddddd;
+}
+
+.dark-mode { display: block; }
+.light-mode { display: none; }

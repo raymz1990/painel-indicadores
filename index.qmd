@@ -1,0 +1,317 @@
+---
+#title: "Painel de Indicadores"
+#author: "Raymundo Eduardo Pilz"
+format:
+  dashboard:
+    embed-resources: true
+scrolling: true
+engine: knitr
+---
+
+```{r}
+#| include: false
+#source("./data/CVM/R/02_DemonstracoesFinanceiras.R")
+library(ggplot2)
+p <- ggplot() + geom_blank() + theme_dark()
+```
+
+# Page 1
+
+## Row {height="30%"}
+
+::: {.valuebox icon="calendar-check" color="light"}
+Visit
+
+`{r} "Start"`
+:::
+
+::: {.valuebox icon="bar-chart-line-fill" color="light"}
+Number of participants
+
+`{r} 2000`
+:::
+
+::: {.valuebox icon="bar-chart-line-fill" color="light"}
+Number of participants (complete)
+
+`{r} 1000`
+:::
+
+## Row {height="70%"}
+
+### Column {width="30%"}
+
+#### Row {.tabset}
+
+
+::: {.card title="Variance"}
+```{r}
+p
+```
+:::
+
+::: {.card title="Features"}
+```{r}
+p
+```
+:::
+
+
+```{r}
+#| output: asis
+#| fig-width: 8
+#| fig-height: 6
+for (i in 1:2) {
+  cat(sprintf("\n\n::: {.card title='Dim %s'}\n\n", i))
+  cat("\n\n:::: {.cell-output-display .html-fill-item .html-fill-container}\n\n")
+  print(p + labs(title = i))
+  cat("\n\n::::\n\n")
+  cat("\n\n:::\n\n")
+}
+```
+
+### Column {.tabset width="70%"}
+
+```{r}
+#| output: asis
+#| fig-width: 8
+#| fig-height: 3
+for (itop in head(letters)) {
+  cat(sprintf("\n\n::: {.card title='%s'}\n\n", itop))
+  cat("\n\n:::: {.cell-output-display .html-fill-item .html-fill-container}\n\n")
+  print(p + labs(title = itop))
+  cat("\n\n::::\n\n")
+  cat("\n\n:::\n\n")
+}
+```
+
+## Row {height="70%"}
+
+### Column {width="30%"}
+
+#### Row {.tabset}
+
+
+::: {.card title="Variance"}
+```{r}
+p
+```
+:::
+
+::: {.card title="Features"}
+```{r}
+p
+```
+:::
+
+
+```{r}
+#| output: asis
+#| fig-width: 8
+#| fig-height: 6
+for (i in 1:2) {
+  cat(sprintf("\n\n::: {.card title='Dim %s'}\n\n", i))
+  cat("\n\n:::: {.cell-output-display .html-fill-item .html-fill-container}\n\n")
+  print(p + labs(title = i))
+  cat("\n\n::::\n\n")
+  cat("\n\n:::\n\n")
+}
+```
+
+### Column {.tabset width="70%"}
+
+```{r}
+#| output: asis
+#| fig-width: 8
+#| fig-height: 3
+for (itop in head(letters)) {
+  cat(sprintf("\n\n::: {.card title='%s'}\n\n", itop))
+  cat("\n\n:::: {.cell-output-display .html-fill-item .html-fill-container}\n\n")
+  print(p + labs(title = itop))
+  cat("\n\n::::\n\n")
+  cat("\n\n:::\n\n")
+}
+```
+
+
+
+# Page 2
+
+## Row {height="30%"}
+
+::: {.card}
+![](https://placehold.co/300x300){height="100%"}
+:::
+
+::: {.card}
+![](https://placehold.co/300x300){height="100%"}
+:::
+
+::: {.card}
+![](https://placehold.co/300x300){height="100%"}
+:::
+
+## Row {height="70%"}
+
+### Column {width="30%"}
+
+#### Row {.tabset}
+
+::: {.card}
+![](https://placehold.co/300x300){height="100%"}
+:::
+
+::: {.card}
+![](https://placehold.co/300x300){height="100%"}
+:::
+
+#### Row
+
+::: {.card}
+![](https://placehold.co/300x300){height="100%"}
+:::
+
+### Column {.tabset width="70%"}
+
+::: {.card}
+![](https://placehold.co/300x300){height="100%"}
+:::
+
+::: {.card}
+![](https://placehold.co/300x300){height="100%"}
+:::
+
+# Page 3
+
+::: {.title}
+**Painel de Indicadores Interativo**
+:::
+
+
+Selecione a empresa ==>
+
+Destaques Financeiros 3T24
+
+## Row {height="30%"}
+
+::: {.valuebox icon="" color="light"}
+Receita Líquida
+
+`{r} "R$ 1,3 Mi"`
+:::
+
+::: {.valuebox icon="" color="light"}
+Custo/ROL
+
+`{r} "R$ 0,5 Mi"`
+:::
+
+::: {.valuebox icon="" color="light"}
+SG&A/ROL
+
+`{r} "R$ 0,2 Mi"`
+:::
+
+::: {.valuebox color="light"}
+Lucro Líquido
+
+`{r} "R$ 0,1 Mi"`
+:::
+
+## Row {height="70%"}
+
+### Column {width="30%"}
+
+#### Row {.tabset}
+
+
+::: {.card title="Variance"}
+```{r}
+p
+```
+:::
+
+::: {.card title="Features"}
+```{r}
+p
+```
+:::
+
+
+```{r}
+#| output: asis
+#| fig-width: 8
+#| fig-height: 6
+for (i in 1:2) {
+  cat(sprintf("\n\n::: {.card title='Dim %s'}\n\n", i))
+  cat("\n\n:::: {.cell-output-display .html-fill-item .html-fill-container}\n\n")
+  print(p + labs(title = i))
+  cat("\n\n::::\n\n")
+  cat("\n\n:::\n\n")
+}
+```
+
+### Column {.tabset width="70%"}
+
+```{r}
+#| output: asis
+#| fig-width: 8
+#| fig-height: 3
+for (itop in head(letters)) {
+  cat(sprintf("\n\n::: {.card title='%s'}\n\n", itop))
+  cat("\n\n:::: {.cell-output-display .html-fill-item .html-fill-container}\n\n")
+  print(p + labs(title = itop))
+  cat("\n\n::::\n\n")
+  cat("\n\n:::\n\n")
+}
+```
+
+## Row {height="70%"}
+
+### Column {width="30%"}
+
+#### Row {.tabset}
+
+
+::: {.card title="Variance"}
+```{r}
+p
+```
+:::
+
+::: {.card title="Features"}
+```{r}
+p
+```
+:::
+
+
+```{r}
+#| output: asis
+#| fig-width: 8
+#| fig-height: 6
+for (i in 1:2) {
+  cat(sprintf("\n\n::: {.card title='Dim %s'}\n\n", i))
+  cat("\n\n:::: {.cell-output-display .html-fill-item .html-fill-container}\n\n")
+  print(p + labs(title = i))
+  cat("\n\n::::\n\n")
+  cat("\n\n:::\n\n")
+}
+```
+
+### Column {.tabset width="70%"}
+
+```{r}
+#| output: asis
+#| fig-width: 8
+#| fig-height: 3
+for (itop in head(letters)) {
+  cat(sprintf("\n\n::: {.card title='%s'}\n\n", itop))
+  cat("\n\n:::: {.cell-output-display .html-fill-item .html-fill-container}\n\n")
+  print(p + labs(title = itop))
+  cat("\n\n::::\n\n")
+  cat("\n\n:::\n\n")
+}
+```
+
+
