@@ -127,19 +127,22 @@ BP <- BP %>% filter(CONTA != "NA")
 
 BP <- right_join(BP, select(empresas, 'CD_CVM', 'EMPRESA'), by = "CD_CVM")
 
-BP <- select(BP, 
-             'CD_CVM',
-             'EMPRESA', 
-             'CD_CONTA', 
-             'CONTA', 
-             'TRIMESTRE',
-             'VL_CONTA')
+BP <- BP %>%select(CNPJ_CIA,
+                   CD_CVM,
+                   EMPRESA,
+                   DENOM_CIA,
+                   CD_CONTA,
+                   DS_CONTA,
+                   TRIMESTRE,
+                   ANO,
+                   CONTA,
+                   VL_CONTA)
 
 # Agrupar os dados e calcular a soma de VL_CONTA para cada grupo
 BP <- BP %>%
-  group_by(CD_CVM, EMPRESA, TRIMESTRE, CONTA) %>%
+  group_by(CD_CVM, EMPRESA, TRIMESTRE, ANO, CONTA) %>%
   mutate(VL_CONTA = sum(VL_CONTA)) %>%
-  distinct(CD_CVM, EMPRESA, TRIMESTRE, CONTA, .keep_all = TRUE)
+  distinct(CD_CVM, EMPRESA, TRIMESTRE, ANO, CONTA, .keep_all = TRUE)
 
 
 #### Salvando em .csv
@@ -151,37 +154,23 @@ BP <- ungroup(BP)
 #   pivot_wider(names_from = EMPRESA, values_from = VL_CONTA) %>%
 #   replace(is.na(.), 0)
 
-## Renomeando colunas TRIMESTRE
-BP <- rename(BP, PERIODO = TRIMESTRE)
+BP2 <- select(BP, 'EMPRESA', 'CD_CONTA', 'CONTA', 'TRIMESTRE', 'VL_CONTA') %>%
+  filter(VL_CONTA != 0) %>%
+  arrange(EMPRESA) %>%
+  pivot_wider(names_from = EMPRESA, values_from = VL_CONTA) %>%
+  replace(is.na(.), 0)
 
 
-
-# BP2 <- select(BP, 'EMPRESA', 'CD_CONTA', 'CONTA', 'TRIMESTRE', 'VL_CONTA') %>%
-#   filter(VL_CONTA != 0) %>%
-#   arrange(EMPRESA) %>%
-#   pivot_wider(names_from = EMPRESA, values_from = VL_CONTA) %>%
-#   replace(is.na(.), 0)
-# 
-# 
-# # Verificando valores unicos de CONTA
-# sort(unique(BP2$CONTA))
+# Verificando valores unicos de CONTA
+sort(unique(BP2$CONTA))
 
 # Salvando o dataframe em .csv
-write.csv(BP, file = "./data/CVM/DemonstraçõesContabeis/BP.csv", 
+write.csv(BP2, file = "./data/CVM/DemonstraçõesContabeis/BP.csv", 
           row.names = FALSE, 
           fileEncoding = "UTF-8")
 
 # Excluindo todos os arquivos na pasta
-# unlink("./data/CVM/Dados_CVM/DemonstracoesFinanceiras/BP/", 
-#        recursive = TRUE, force = FALSE)
-
-# Lista todos os arquivos na pasta BP
-arquivos <- list.files("./data/CVM/Dados_CVM/DemonstracoesFinanceiras/BP/")
-
-# Remove cada arquivo individualmente
-for (arquivo in arquivos) {
-  file.remove(paste0("./data/CVM/Dados_CVM/DemonstracoesFinanceiras/BP/", arquivo))
-}
+unlink("./data/CVM/Dados_CVM/DemonstracoesFinanceiras/BP/", recursive = TRUE)
 
 
 ###########################

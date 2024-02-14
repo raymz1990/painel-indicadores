@@ -1,5 +1,5 @@
 # Carregando empresas
-# source("./data/CVM/R/01_BaseDados.R")
+source("./data/CVM/R/01_BaseDados.R")
 
 # Carregando arquivos do BP
 
@@ -20,6 +20,8 @@ DRE <- do.call(rbind, lista_DRE)
 
 
 #### CONFIGURANDO DADOS DRE ####
+CD_CVM_unique <- unique(empresas$CD_CVM)
+
 # alterando o formato da coluna CD_CVM
 DRE$CD_CVM <- as.character(DRE$CD_CVM)
 empresas$CD_CVM <- as.character(empresas$CD_CVM)
@@ -80,26 +82,19 @@ DRE$CONTA <- paste(DRE$CD_CONTA, "-", DRE$DS_CONTA)
 DRE <- right_join(DRE, select(empresas, 'CD_CVM', 'EMPRESA'), by = "CD_CVM")
 
 
-
-
-
-DRE <- DRE %>%
-  select(CNPJ_CIA,
-         CD_CVM,
-         EMPRESA,
-         DENOM_CIA,
-         CD_CONTA,
-         DS_CONTA,
-         PERIODO,
-         ANO,
-         CONTA,
-         VL_CONTA)
+DRE <- select(DRE, 
+              'CD_CVM',
+              'EMPRESA', 
+              'CD_CONTA', 
+              'CONTA', 
+              'PERIODO',
+              'VL_CONTA')
 
 # Agrupar os dados e calcular a soma de VL_CONTA para cada grupo
 DRE <- DRE %>%
-  group_by(CD_CVM, EMPRESA, PERIODO, ANO, CONTA) %>%
+  group_by(CD_CVM, EMPRESA, PERIODO, CONTA) %>%
   mutate(VL_CONTA = sum(VL_CONTA)) %>%
-  distinct(CD_CVM, EMPRESA, PERIODO, ANO, CONTA, .keep_all = TRUE)
+  distinct(CD_CVM, EMPRESA, PERIODO, CONTA, .keep_all = TRUE)
 
 
 #### Salvando em .csv
@@ -135,22 +130,30 @@ DRE <- DRE[DRE$CONTA == "3.01 - Receita de Venda de Bens e/ou Serviços" |
              DRE$CONTA == "3.11.02 - Atribuído a Sócios Não Controladores", ]
 
 
-DRE2 <- select(DRE, 'EMPRESA', 'CD_CONTA', 'CONTA', 'PERIODO', 'VL_CONTA') %>%
-  filter(VL_CONTA != 0) %>%
-  arrange(EMPRESA) %>%
-  pivot_wider(names_from = EMPRESA, values_from = VL_CONTA) %>%
-  replace(is.na(.), 0)
-
-
-sort(unique(DRE2$CONTA))
+# DRE2 <- select(DRE, 'EMPRESA', 'CD_CONTA', 'CONTA', 'PERIODO', 'VL_CONTA') %>%
+#   filter(VL_CONTA != 0) %>%
+#   arrange(EMPRESA) %>%
+#   pivot_wider(names_from = EMPRESA, values_from = VL_CONTA) %>%
+#   replace(is.na(.), 0)
+# 
+# 
+# sort(unique(DRE2$CONTA))
 
 # Salvando o dataframe em .csv
-write.csv(DRE2, file = "./data/CVM/DemonstraçõesContabeis/DRE.csv", 
+write.csv(DRE, file = "./data/CVM/DemonstraçõesContabeis/DRE.csv", 
            row.names = FALSE, 
           fileEncoding = "UTF-8")
 
 # Excluindo todos os arquivos na pasta
-unlink("./data/CVM/Dados_CVM/DemonstracoesFinanceiras/DRE/", recursive = TRUE)
+# unlink("./data/CVM/Dados_CVM/DemonstracoesFinanceiras/DRE/", recursive = TRUE)
+
+# Lista todos os arquivos na pasta 
+arquivos <- list.files("./data/CVM/Dados_CVM/DemonstracoesFinanceiras/DRE/")
+
+# Remove cada arquivo individualmente
+for (arquivo in arquivos) {
+  file.remove(paste0("./data/CVM/Dados_CVM/DemonstracoesFinanceiras/DRE/", arquivo))
+}
 
 
 ############################
