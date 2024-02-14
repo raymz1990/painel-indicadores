@@ -161,6 +161,16 @@ BP2 <- select(BP, 'EMPRESA', 'CD_CONTA', 'CONTA', 'TRIMESTRE', 'VL_CONTA') %>%
   replace(is.na(.), 0)
 
 
+# Verificando valores unicos de CONTA
+sort(unique(BP2$CONTA))
+
+# Salvando o dataframe em .csv
+write.csv(BP2, file = "./data/CVM/DemonstraçõesContabeis/BP.csv", 
+          row.names = FALSE, 
+          fileEncoding = "UTF-8")
+
+# Excluindo todos os arquivos na pasta
+unlink("./data/CVM/Dados_CVM/DemonstracoesFinanceiras/BP/", recursive = TRUE)
 
 
 ###########################
@@ -201,138 +211,3 @@ BP2 <- select(BP, 'EMPRESA', 'CD_CONTA', 'CONTA', 'TRIMESTRE', 'VL_CONTA') %>%
 
 # BP1 <- select(BP, 'CD_CVM', 'CONTA', 'TRIMESTRE', 'ANO', 'VL_CONTA') %>%
 #   pivot_wider(names_from = CONTA, values_from = VL_CONTA)
-
-
-
-
-#### CONFIGURANDO DADOS DRE ####
-# alterando o formato da coluna CD_CVM
-DRE$CD_CVM <- as.character(DRE$CD_CVM)
-# filtrar as linhas que contém as empresas desejadas na coluna "DENOM_CIA"
-DRE <- subset(DRE, CD_CVM %in% CD_CVM_unique & ORDEM_EXERC == "ÚLTIMO")
-# Criando colunas Trimestre e Ano
-DRE$TRIMESTRE <- paste0(as.numeric(substr(DRE$DT_REFER, 6, 7)) / 3, 'T', 
-                       as.numeric(substr(DRE$DT_REFER, 3, 4)))
-DRE$ANO <- as.numeric(substr(DRE$DT_REFER, 1, 4))
-# A DRE está criando 2 linhas para cada conta, 1 para o trimestre e 1 para o período acumulado
-# solução: criar uma coluna PERIODO identificando quando é trimestre e o periodo acumulado
-
-# P.S.1: Também foi identificado que algumas incossistencia no 1T de algumas empresas. Assim, estamos elimininando estas linhas com divergências
-DRE <- subset(DRE, !(substr(DRE$DT_INI_EXERC, nchar(DRE$DT_INI_EXERC) - 4, nchar(DRE$DT_INI_EXERC)) == "03-01"))
-DRE <- subset(DRE, !(substr(DRE$DT_INI_EXERC, nchar(DRE$DT_INI_EXERC) - 4, nchar(DRE$DT_INI_EXERC)) == "10-01"))
-
-# No 1T não há mais incossistência. 
-# No 2T, quando acumulado, será identificado como 6M + ano
-# No 3T, quando acumulado, será identificado como 9M + ano
-# No 4T está somente apresentando o acumulado. ** Deverá ser criado um calculo subtraindo o 9M
-ano <- as.numeric(substr(DRE$DT_REFER, 3, 4))
-DRE$PERIODO <- 
-  ifelse(
-    substr(DRE$TRIMESTRE, 1, 2) == "2T" &
-      substr(DRE$DT_INI_EXERC, 6, 10) == "01-01", 
-    paste0("6M", ano),
-    ifelse(
-      substr(DRE$TRIMESTRE, 1, 2) == "3T" & 
-        substr(DRE$DT_INI_EXERC, nchar(DRE$DT_INI_EXERC) - 4, 
-               nchar(DRE$DT_INI_EXERC)) == "01-01", 
-      paste0("9M", ano),
-      ifelse(
-        substr(DRE$TRIMESTRE, 1, 2) == "4T", DRE$ANO,
-        DRE$TRIMESTRE)))
-
-# Verificando se não há nenhuma anormalidade nos dados (empresas tem demonstrado dados fora do padrão)
-# Agrupe os dados para identificar as combinações com valores duplicados
-# duplications <- DRE %>%
-#  group_by(CD_CONTA, DS_CONTA, NIVEL, CLASSE, CONTA, PERIODO, DENOM_CIA, .groups = "drop") %>%
-#  summarise(n = n()) %>%
-#  filter(n > 1L) 
-
-# unique(DRE$DS_CONTA)
-contas_DRE <- DRE[, c('CD_CONTA', 'DS_CONTA')]
-contas_DRE <- unique(contas_DRE)
-
-
-# Criando uma nova tabela BP
-DRE$NIVEL <- nchar(DRE$CD_CONTA)
-DRE$CLASSE <- ifelse(DRE$NIVEL == 1, as.character(DRE$NIVEL), substr(DRE$CD_CONTA, 1, 4))
-contas_DRE <- DRE[, c('NIVEL', 'CLASSE', 'CD_CONTA', 'DS_CONTA', 'ST_CONTA_FIXA')]
-contas_DRE <- unique(contas_DRE)
-
-DRE <- subset(DRE, (CLASSE == 1.02 & NIVEL <= 10) | (CLASSE != 1.02 & NIVEL <= 7))
-
-DRE$CONTA <- paste(DRE$CD_CONTA, "-", DRE$DS_CONTA)
-
-DRE <- right_join(DRE, select(empresas, 'CD_CVM', 'EMPRESA'), by = "CD_CVM")
-
-
-
-
-
-DRE <- DRE %>%
-  select(CNPJ_CIA,
-         CD_CVM,
-         EMPRESA,
-         DENOM_CIA,
-         CD_CONTA,
-         DS_CONTA,
-         PERIODO,
-         ANO,
-         CONTA,
-         VL_CONTA)
-
-# Agrupar os dados e calcular a soma de VL_CONTA para cada grupo
-DRE <- DRE %>%
-  group_by(CD_CVM, EMPRESA, PERIODO, ANO, CONTA) %>%
-  mutate(VL_CONTA = sum(VL_CONTA)) %>%
-  distinct(CD_CVM, EMPRESA, PERIODO, ANO, CONTA, .keep_all = TRUE)
-
-
-#### Salvando em .csv
-colnames(DRE)
-DRE <- ungroup(DRE)
-# DRE2 <- select(DRE, 'EMPRESA', 'CD_CONTA', 'CONTA', 'PERIODO', 'VL_CONTA') %>%
-#   filter(VL_CONTA != 0 & (PERIODO == '2022' | PERIODO == '9M23')) %>%
-#   arrange(EMPRESA) %>%
-#   pivot_wider(names_from = EMPRESA, values_from = VL_CONTA) %>%
-#   replace(is.na(.), 0)
-
-DRE2 <- select(DRE, 'EMPRESA', 'CD_CONTA', 'CONTA', 'PERIODO', 'VL_CONTA') %>%
-  filter(VL_CONTA != 0) %>%
-  arrange(EMPRESA) %>%
-  pivot_wider(names_from = EMPRESA, values_from = VL_CONTA) %>%
-  replace(is.na(.), 0)
-
-
-
-############################
-##### SALVANDO EM .CSV
-
-
-# DRE4T20 <- DRE2 %>%
-#   filter(PERIODO == '2020')
-# 
-# DRE4T21 <- DRE2 %>%
-#   filter(PERIODO == '2021')
-# 
-# DRE4T22 <- DRE2 %>%
-#   filter(PERIODO == '2022')
-# 
-# DRE1T23 <- DRE2 %>%
-#   filter(PERIODO == '1T23')
-# 
-# DRE2T23 <- DRE2 %>%
-#   filter(PERIODO == '6M23')
-# 
-# DRE3T23 <- DRE2 %>%
-#   filter(PERIODO == '9M23')
-# 
-# # Salvando o dataframe BP2 em um arquivo CSV chamado "BP2.csv"
-# write.csv(DRE4T20, file = "DemonstraçõesContabeis/DRE_4T20.csv", row.names = FALSE, fileEncoding = "UTF-8")
-# write.csv(DRE4T21, file = "DemonstraçõesContabeis/DRE_4T21.csv", row.names = FALSE, fileEncoding = "UTF-8")
-# write.csv(DRE4T22, file = "DemonstraçõesContabeis/DRE_4T22.csv", row.names = FALSE, fileEncoding = "UTF-8")
-# write.csv(DRE1T23, file = "DemonstraçõesContabeis/DRE_1T23.csv", row.names = FALSE, fileEncoding = "UTF-8")
-# write.csv(DRE2T23, file = "DemonstraçõesContabeis/DRE_2T23.csv", row.names = FALSE, fileEncoding = "UTF-8")
-# write.csv(DRE3T23, file = "DemonstraçõesContabeis/DRE_3T23.csv", row.names = FALSE, fileEncoding = "UTF-8")
-
-
-

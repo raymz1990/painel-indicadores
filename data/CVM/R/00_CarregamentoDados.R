@@ -160,11 +160,16 @@ for (ano in anos_itr) {
   arquivo_zip_itr <- file.path(pasta_destino, paste0("Arquivos/itr_cia_aberta_", ano, ".zip"))
   arquivo_csv_itr <- paste0("itr_cia_aberta_", ano, ".csv")
   unzip(arquivo_zip_itr, files = arquivo_csv_itr, exdir = pasta_dados)
+  file.remove(arquivo_zip_itr)  # Excluir o arquivo ZIP após extração
 }
 
 for (ano in anos_dfp) {
   arquivo_zip_dfp <- file.path(pasta_destino, paste0("Arquivos/dfp_cia_aberta_", ano, ".zip"))
   arquivo_csv_dfp <- paste0("dfp_cia_aberta_", ano, ".csv")
   unzip(arquivo_zip_dfp, files = arquivo_csv_dfp, exdir = pasta_dados)
+  file.remove(arquivo_zip_dfp)  # Excluir o arquivo ZIP após extração
 }
+
+
+
 
