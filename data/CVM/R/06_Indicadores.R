@@ -70,7 +70,8 @@ ind_liquidez$liq_seca <- round((ind_liquidez$`1.01` - ind_liquidez$`1.01.04`) / 
 ind_liquidez$liq_imediata <- round((ind_liquidez$`1.01.01` + ind_liquidez$`1.01.02`) / ind_liquidez$`2.01`, 2)
 
 colnames(ind_liquidez)
-ind_liquidez <- select(ind_liquidez, EMPRESA, PERIODO, liq_geral, liq_corrente, liq_seca, liq_seca)
+ind_liquidez <- select(ind_liquidez, EMPRESA, PERIODO,
+                       liq_geral, liq_corrente, liq_seca, liq_seca, liq_imediata)
 # ENDIVIDAMENTO
 ind_endividamento <- BP[c("EMPRESA", "PERIODO",
                           "1",
@@ -86,6 +87,6 @@ ind_endividamento$geral_ativo <- round((ind_endividamento$`2.01` + ind_endividam
 ind_endividamento$garantia_cap_proprio <- round(ind_endividamento$`2.03` / 
                                                 (ind_endividamento$`2.01` + ind_endividamento$`2.02`)
                                                 * 100, 2)
-2.3) De Curto Prazo s/Total	21/(21+221) x 100
-
-  23/(21+221) x 100
+# 2.3) De Curto Prazo s/Total	21/(21+221) x 100
+# 
+#   23/(21+221) x 100

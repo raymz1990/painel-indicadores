@@ -1801,6 +1801,23 @@
 "25143","Pacaembu","1.02.02","1.02.02 - Investimentos","4T22",15580
 "25143","Pacaembu","1.02.03","1.02.03 - Imobilizado","4T22",13531
 "25143","Pacaembu","1.02.04","1.02.04 - Intangível","4T22",3118
+"25798","Kallas","1","1 - Ativo Total","4T23",1990895
+"25798","Kallas","1.01","1.01 - Ativo Circulante","4T23",1309773
+"25798","Kallas","1.01.01","1.01.01 - Caixa e Equivalentes de Caixa","4T23",104778
+"25798","Kallas","1.01.02","1.01.02 - Aplicações Financeiras","4T23",0
+"25798","Kallas","1.01.03","1.01.03 - Contas a Receber","4T23",346780
+"25798","Kallas","1.01.04","1.01.04 - Estoques","4T23",0
+"25798","Kallas","1.01.05","1.01.05 - Outros Ativos Circulantes","4T23",858215
+"25798","Kallas","1.02","1.02 - Ativo Não Circulante","4T23",681122
+"25798","Kallas","1.02.01","1.02.01 - Ativo Realizável a Longo Prazo","4T23",527225
+"25798","Kallas","1.02.01.01","1.02.01.01 - Aplicações Financeiras","4T23",0
+"25798","Kallas","1.02.01.04","1.02.01.02 - Contas a Receber","4T23",309734
+"25798","Kallas","1.02.01.05","1.02.01.03 - Estoques","4T23",0
+"25798","Kallas","1.02.01.06","1.02.01.05 - Outros Ativos Não Circulantes","4T23",217491
+"25798","Kallas","1.02.01.09","1.02.01.04 - Créditos com Partes Relacionadas","4T23",0
+"25798","Kallas","1.02.02","1.02.02 - Investimentos","4T23",129908
+"25798","Kallas","1.02.03","1.02.03 - Imobilizado","4T23",14602
+"25798","Kallas","1.02.04","1.02.04 - Intangível","4T23",9387
 "27340","Metrocasa","1","1 - Ativo Total","4T23",593270
 "27340","Metrocasa","1.01","1.01 - Ativo Circulante","4T23",435648
 "27340","Metrocasa","1.01.01","1.01.01 - Caixa e Equivalentes de Caixa","4T23",72287
@@ -3955,6 +3972,26 @@
 "25143","Pacaembu","2.03.07","2.03.07 - Ajustes Acumulados de Conversão","4T22",0
 "25143","Pacaembu","2.03.08","2.03.08 - Outros Resultados Abrangentes","4T22",0
 "25143","Pacaembu","2.03.09","2.03.09 - Participação dos Acionistas Não Controladores","4T22",0
+"25798","Kallas","2","2 - Passivo Total","4T23",1990895
+"25798","Kallas","2.01","2.01 - Passivo Circulante","4T23",440467
+"25798","Kallas","2.01.01","2.01.01 - Obrigações Sociais e Trabalhistas","4T23",8365
+"25798","Kallas","2.01.02","2.01.02 - Fornecedores","4T23",37156
+"25798","Kallas","2.01.03","2.01.03 - Obrigações Fiscais","4T23",19432
+"25798","Kallas","2.01.04","2.01.04 - Empréstimos e Financiamentos","4T23",171533
+"25798","Kallas","2.01.05","2.01.05 - Outras Obrigações","4T23",203981
+"25798","Kallas","2.02","2.02 - Passivo Não Circulante","4T23",615280
+"25798","Kallas","2.02.01","2.02.01 - Empréstimos e Financiamentos","4T23",323964
+"25798","Kallas","2.02.02","2.02.02 - Outras Obrigações","4T23",291316
+"25798","Kallas","2.03","2.03 - Patrimônio Líquido","4T23",935148
+"25798","Kallas","2.03.01","2.03.01 - Capital Social Realizado","4T23",817826
+"25798","Kallas","2.03.02","2.03.02 - Reservas de Capital","4T23",-3017
+"25798","Kallas","2.03.03","2.03.03 - Reservas de Reavaliação","4T23",0
+"25798","Kallas","2.03.04","2.03.04 - Reservas de Lucros","4T23",57740
+"25798","Kallas","2.03.05","2.03.05 - Lucros/Prejuízos Acumulados","4T23",0
+"25798","Kallas","2.03.06","2.03.06 - Ajustes de Avaliação Patrimonial","4T23",0
+"25798","Kallas","2.03.07","2.03.07 - Ajustes Acumulados de Conversão","4T23",0
+"25798","Kallas","2.03.08","2.03.08 - Outros Resultados Abrangentes","4T23",0
+"25798","Kallas","2.03.09","2.03.09 - Participação dos Acionistas Não Controladores","4T23",62599
 "27340","Metrocasa","2","2 - Passivo Total","4T23",593270
 "27340","Metrocasa","2.01","2.01 - Passivo Circulante","4T23",267064
 "27340","Metrocasa","2.01.01","2.01.01 - Obrigações Sociais e Trabalhistas","4T23",464
