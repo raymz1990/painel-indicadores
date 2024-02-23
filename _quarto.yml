@@ -1,6 +1,7 @@
 project: 
   type: website
   title: Painel de Indicadores
+  output-dir: docs
 
 website:
   navbar:

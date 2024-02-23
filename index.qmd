@@ -15,16 +15,29 @@ source("./data/CVM/R/06_Indicadores.R")
 p <- ggplot() + geom_blank() + theme_dark()
 ```
 
+
+# {.sidebar}
+
+![](images/penguins.png){width="80%"}
+
+```{ojs inputs-start}
+viewof start = Inputs.date({label: "Start date →",
+                            value: d3.min(allDates),
+                            min: d3.min(allDates),
+                            max: d3.max(allDates)})
+```
+
 # Page 1
 
 ## Row {height="70%"}
 
 #### Row {.tabset}
 
-INDICADORES DE LIQUIDEZ
 
 ::: {.card title="4T23"}
 ```{r}
+#| title: INDICADORES DE LIQUIDEZ
+
 ind_liquidez <- ind_liquidez %>%
     rename(
       Empresa = EMPRESA,
@@ -48,12 +61,14 @@ DT::datatable(
   liq_periodo_01, 
   rownames = F,
   options = list(
+    pageLength = 10,
     initComplete = JS(
       "function(settings, json) {",
       "$(this.api().table().header()).css({
       'background-color': '#B52730', 
       'color': '#fff'});","}"),
     width = '100%',
+     
     align = 'center'
     ))
 ```
@@ -462,19 +477,43 @@ Selecione a empresa ==>
 
 Destaques Financeiros 3T24
 
-## Row {height="30%"}
 
-::: {.valuebox icon="" color="light"}
-Receita Líquida
+### Row {height="10%"}
 
-`{r} "R$ 1,3 Mi"`
-:::
+```{r}
+#| component: valuebox
+#| title: "Receita Líquida"
 
-::: {.valuebox icon="" color="light"}
-Custo/ROL
+list(
+  icon = "file-medical",
+  color = "primary",
+  value = "R$ 1,3 Mi"
+)
+```
 
-`{r} "R$ 0,5 Mi"`
-:::
+```{r}
+#| component: valuebox
+#| title: "Custo/ROL"
+
+list(
+  icon = "calendar-week",
+  color = "red",
+  value = "R$ 0,5 Mi"
+)
+```
+
+```{r}
+#| component: valuebox
+#| title: "SG&A/ROL"
+
+list(
+  icon = "",
+  color = "light",
+  value = "R$ 0,5 Mi"
+)
+```
+
+
 
 ::: {.valuebox icon="" color="light"}
 SG&A/ROL
