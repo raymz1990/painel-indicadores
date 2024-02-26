@@ -1,0 +1,480 @@
+# Interactive Selection
+
+```{r}
+#| include: false
+source("./data/CVM/R/06_Indicadores.R")
+
+p <- ggplot() + geom_blank() + theme_dark()
+```
+
+## {.sidebar}
+
+
+```{r}
+#| context: setup
+library(gt)
+library(dplyr)
+library(ggplot2)
+library(purrr)
+library(ggiraph)
+library(htmltools)
+library(reactable)
+color_palette <- c("#E69F00", "#009E73", "#0072B2")
+names(color_palette) <- unique(palmerpenguins::penguins$species)
+```
+
+
+```{r}
+div(
+  div('Species', style = 'font-weight:600'),
+  purrr::map(
+    unique(palmerpenguins::penguins$species), 
+    \(x) tags$input(
+      type = 'checkbox',
+      name = 'checkboxes',
+      checked = 'checked',
+      value = x,
+      x
+    )
+  ),
+  onchange = reactable::JS(
+          "Reactable.setFilter(
+            'tbl',
+            'Species',
+            function() {
+              checkboxes = document.querySelectorAll('input[name=\"checkboxes\"]');
+              return Array.from(checkboxes)
+                .filter(function(checkbox) {
+                  return checkbox.checked;
+                })
+                .map(function(checkbox) {
+                  return checkbox.value;
+                });
+            }
+          )
+          "
+  )
+)
+
+
+```
+
+```{r}
+div(
+  div('Empresas', style = 'font-weight:600'),
+  tags$input(
+    type = 'checkbox',
+    id = 'select_all',
+    checked = 'checked',
+    onchange = 'selectAll(this)'
+  ),
+  'Selecionar todos',
+  purrr::map(struct_empresas$EMPRESA, \(x) {
+    div(
+      tags$input(
+        type = 'checkbox',
+        name = 'checkboxes',
+        value = x,
+        checked = 'checked'
+      ),
+      x
+    )
+  }),
+  tags$script(
+    "
+    function selectAll(source) {
+      var checkboxes = document.getElementsByName('checkboxes');
+      for(var i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].checked = source.checked;
+      }
+    }
+    "
+  )
+)
+
+
+```
+
+## Main Body
+
+### First row {height="70%"}
+
+#### Row {.tabset}
+
+
+::: {.card title="4T23"}
+```{r}
+#| title: INDICADORES DE LIQUIDEZ
+
+ind_liquidez <- ind_liquidez %>%
+    rename(
+      Empresa = EMPRESA,
+      `Liquidez Geral` = liq_geral,
+      `Liquidez Corrente` = liq_corrente,
+      `Liquidez Seca` = liq_seca,
+      `Liquidez Imediata` = liq_imediata)
+
+# Formatando os números com duas casas decimais e separados por vírgula
+ind_liquidez$`Liquidez Geral` <- formatC(ind_liquidez$`Liquidez Geral`, format = "f", digits = 2, decimal.mark = ",", big.mark = ".", width = NULL)
+ind_liquidez$`Liquidez Corrente` <- formatC(ind_liquidez$`Liquidez Corrente`, format = "f", digits = 2, decimal.mark = ",", big.mark = ".", width = NULL)
+ind_liquidez$`Liquidez Seca` <- formatC(ind_liquidez$`Liquidez Seca`, format = "f", digits = 2, decimal.mark = ",", big.mark = ".", width = NULL)
+ind_liquidez$`Liquidez Imediata` <- formatC(ind_liquidez$`Liquidez Imediata`, format = "f", digits = 2, decimal.mark = ",", big.mark = ".", width = NULL)
+
+liq_periodo_01 <- ind_liquidez %>%
+  filter(PERIODO == "4T23") %>%
+  select(-PERIODO)
+
+  
+DT::datatable(
+  liq_periodo_01, 
+  rownames = F,
+  options = list(
+    pageLength = 10,
+    initComplete = JS(
+      "function(settings, json) {",
+      "$(this.api().table().header()).css({
+      'background-color': '#B52730', 
+      'color': '#fff'});","}"),
+    width = '100%',
+     
+    align = 'center'
+    ))
+```
+:::
+
+::: {.card title="3T23"}
+```{r}
+liq_periodo_01 <- ind_liquidez %>%
+  filter(PERIODO == "3T23") %>%
+  select(-PERIODO)
+
+  
+DT::datatable(
+  liq_periodo_01, 
+  rownames = F,
+  options = list(
+    initComplete = JS(
+      "function(settings, json) {",
+      "$(this.api().table().header()).css({
+      'background-color': '#B52730', 
+      'color': '#fff'});","}"),
+    width = '100%',
+    align = 'center'
+    ))
+```
+:::
+
+::: {.card title="2T23"}
+```{r}
+liq_periodo_01 <- ind_liquidez %>%
+  filter(PERIODO == "2T23") %>%
+  select(-PERIODO)
+
+  
+DT::datatable(
+  liq_periodo_01, 
+  rownames = F,
+  options = list(
+    initComplete = JS(
+      "function(settings, json) {",
+      "$(this.api().table().header()).css({
+      'background-color': '#B52730', 
+      'color': '#fff'});","}"),
+    width = '100%',
+    align = 'center'
+    ))
+```
+:::
+
+::: {.card title="1T23"}
+```{r}
+liq_periodo_01 <- ind_liquidez %>%
+  filter(PERIODO == "1T23") %>%
+  select(-PERIODO)
+
+  
+DT::datatable(
+  liq_periodo_01, 
+  rownames = F,
+  options = list(
+    initComplete = JS(
+      "function(settings, json) {",
+      "$(this.api().table().header()).css({
+      'background-color': '#B52730', 
+      'color': '#fff'});","}"),
+    width = '100%',
+    align = 'center'
+    ))
+```
+:::
+
+::: {.card title="4T22"}
+```{r}
+liq_periodo_01 <- ind_liquidez %>%
+  filter(PERIODO == "4T22") %>%
+  select(-PERIODO)
+
+  
+DT::datatable(
+  liq_periodo_01, 
+  rownames = F,
+  options = list(
+    initComplete = JS(
+      "function(settings, json) {",
+      "$(this.api().table().header()).css({
+      'background-color': '#B52730', 
+      'color': '#fff'});","}"),
+    width = '100%',
+    align = 'center'
+    ))
+```
+:::
+
+::: {.card title="3T22"}
+```{r}
+liq_periodo_01 <- ind_liquidez %>%
+  filter(PERIODO == "3T22") %>%
+  select(-PERIODO)
+
+  
+DT::datatable(
+  liq_periodo_01, 
+  rownames = F,
+  options = list(
+    initComplete = JS(
+      "function(settings, json) {",
+      "$(this.api().table().header()).css({
+      'background-color': '#B52730', 
+      'color': '#fff'});","}"),
+    width = '100%',
+    align = 'center'
+    ))
+```
+:::
+
+::: {.card title="2T22"}
+```{r}
+liq_periodo_01 <- ind_liquidez %>%
+  filter(PERIODO == "2T22") %>%
+  select(-PERIODO)
+
+  
+DT::datatable(
+  liq_periodo_01, 
+  rownames = F,
+  options = list(
+    initComplete = JS(
+      "function(settings, json) {",
+      "$(this.api().table().header()).css({
+      'background-color': '#B52730', 
+      'color': '#fff'});","}"),
+    width = '100%',
+    align = 'center'
+    ))
+```
+:::
+
+::: {.card title="1T22"}
+```{r}
+liq_periodo_01 <- ind_liquidez %>%
+  filter(PERIODO == "1T22") %>%
+  select(-PERIODO)
+
+  
+DT::datatable(
+  liq_periodo_01, 
+  rownames = F,
+  options = list(
+    initComplete = JS(
+      "function(settings, json) {",
+      "$(this.api().table().header()).css({
+      'background-color': '#B52730', 
+      'color': '#fff'});","}"),
+    width = '100%',
+    align = 'center'
+    ))
+```
+:::
+
+::: {.card title="4T21"}
+```{r}
+liq_periodo_01 <- ind_liquidez %>%
+  filter(PERIODO == "4T21") %>%
+  select(-PERIODO)
+
+  
+DT::datatable(
+  liq_periodo_01, 
+  rownames = F,
+  options = list(
+    initComplete = JS(
+      "function(settings, json) {",
+      "$(this.api().table().header()).css({
+      'background-color': '#B52730', 
+      'color': '#fff'});","}"),
+    width = '100%',
+    align = 'center'
+    ))
+```
+:::
+
+::: {.card title="3T21"}
+```{r}
+liq_periodo_01 <- ind_liquidez %>%
+  filter(PERIODO == "3T21") %>%
+  select(-PERIODO)
+
+  
+DT::datatable(
+  liq_periodo_01, 
+  rownames = F,
+  options = list(
+    initComplete = JS(
+      "function(settings, json) {",
+      "$(this.api().table().header()).css({
+      'background-color': '#B52730', 
+      'color': '#fff'});","}"),
+    width = '100%',
+    align = 'center'
+    ))
+```
+:::
+
+::: {.card title="2T21"}
+```{r}
+liq_periodo_01 <- ind_liquidez %>%
+  filter(PERIODO == "2T21") %>%
+  select(-PERIODO)
+
+  
+DT::datatable(
+  liq_periodo_01, 
+  rownames = F,
+  options = list(
+    initComplete = JS(
+      "function(settings, json) {",
+      "$(this.api().table().header()).css({
+      'background-color': '#B52730', 
+      'color': '#fff'});","}"),
+    width = '100%',
+    align = 'center'
+    ))
+```
+:::
+
+::: {.card title="1T21"}
+```{r}
+liq_periodo_01 <- ind_liquidez %>%
+  filter(PERIODO == "1T21") %>%
+  select(-PERIODO)
+
+  
+DT::datatable(
+  liq_periodo_01, 
+  rownames = F,
+  editable = T,
+  options = list(
+    initComplete = JS(
+      "function(settings, json) {",
+      "$(this.api().table().header()).css({
+      'background-color': '#B52730', 
+      'color': '#fff'});","}"),
+    width = '100%',
+    align = 'center'
+    ))
+```
+:::
+
+::: {.card title="4T20"}
+```{r}
+liq_periodo_01 <- ind_liquidez %>%
+  filter(PERIODO == "4T20") %>%
+  select(-PERIODO)
+
+  
+DT::datatable(
+  liq_periodo_01, 
+  rownames = F,
+  editable = T,
+  options = list(
+    initComplete = JS(
+      "function(settings, json) {",
+      "$(this.api().table().header()).css({
+      'background-color': '#B52730', 
+      'color': '#fff'});","}"),
+    width = '100%',
+    align = 'center'
+    ))
+```
+:::
+::: {.card title="3T20"}
+```{r}
+liq_periodo_01 <- ind_liquidez %>%
+  filter(PERIODO == "3T20") %>%
+  select(-PERIODO)
+
+  
+DT::datatable(
+  liq_periodo_01, 
+  rownames = F,
+  editable = T,
+  options = list(
+    initComplete = JS(
+      "function(settings, json) {",
+      "$(this.api().table().header()).css({
+      'background-color': '#B52730', 
+      'color': '#fff'});","}"),
+    width = '100%',
+    align = 'center'
+    ))
+```
+:::
+
+::: {.card title="2T20"}
+```{r}
+liq_periodo_01 <- ind_liquidez %>%
+  filter(PERIODO == "2T20") %>%
+  select(-PERIODO)
+
+  
+DT::datatable(
+  liq_periodo_01, 
+  rownames = F,
+  editable = T,
+  options = list(
+    initComplete = JS(
+      "function(settings, json) {",
+      "$(this.api().table().header()).css({
+      'background-color': '#B52730', 
+      'color': '#fff'});","}"),
+    width = '100%',
+    align = 'center'
+    ))
+```
+:::
+
+::: {.card title="1T20"}
+```{r}
+liq_periodo_01 <- ind_liquidez %>%
+  filter(PERIODO == "1T20") %>%
+  select(-PERIODO)
+
+  
+DT::datatable(
+  liq_periodo_01, 
+  rownames = F,
+  editable = T,
+  options = list(
+    initComplete = JS(
+      "function(settings, json) {",
+      "$(this.api().table().header()).css({
+      'background-color': '#B52730', 
+      'color': '#fff'});","}"),
+    dom = 'Bfrtip',
+    buttons = c('copy', 'csv', 'excel', 'pdf', 'print'))
+)
+```
+:::
+
+
+

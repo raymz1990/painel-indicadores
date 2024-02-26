@@ -16,17 +16,6 @@ p <- ggplot() + geom_blank() + theme_dark()
 ```
 
 
-# {.sidebar}
-
-![](images/penguins.png){width="80%"}
-
-```{ojs inputs-start}
-viewof start = Inputs.date({label: "Start date →",
-                            value: d3.min(allDates),
-                            min: d3.min(allDates),
-                            max: d3.max(allDates)})
-```
-
 # Page 1
 
 ## Row {height="70%"}
@@ -624,3 +613,4 @@ for (itop in head(letters)) {
 ```
 
 
+{{< include 01_painel1.qmd >}}
