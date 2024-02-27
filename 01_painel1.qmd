@@ -1,4 +1,4 @@
-# Interactive Selection
+# Indicadores
 
 ```{r}
 #| include: false
@@ -25,71 +25,66 @@ names(color_palette) <- unique(palmerpenguins::penguins$species)
 
 
 ```{r}
-div(
-  div('Species', style = 'font-weight:600'),
-  purrr::map(
-    unique(palmerpenguins::penguins$species), 
-    \(x) tags$input(
-      type = 'checkbox',
-      name = 'checkboxes',
-      checked = 'checked',
-      value = x,
-      x
-    )
-  ),
-  onchange = reactable::JS(
-          "Reactable.setFilter(
-            'tbl',
-            'Species',
-            function() {
-              checkboxes = document.querySelectorAll('input[name=\"checkboxes\"]');
-              return Array.from(checkboxes)
-                .filter(function(checkbox) {
-                  return checkbox.checked;
-                })
-                .map(function(checkbox) {
-                  return checkbox.value;
-                });
-            }
+HTML('
+  <div>
+    <div style="font-weight:600">Empresas</div>
+    <div id="checkboxes_div">
+      <input type="checkbox" id="select_all" checked>
+      <label for="select_all">Selecionar todos</label>
+      <br>', 
+      paste0(
+        lapply(struct_empresas$EMPRESA, function(x) {
+          paste0(
+            '<input type="checkbox" name="checkboxes" value="', x, '" checked>',
+            '<label>', x, '</label>',
+            '<br>'
           )
-          "
-  )
-)
-
-
-```
-
-```{r}
-div(
-  div('Empresas', style = 'font-weight:600'),
-  tags$input(
-    type = 'checkbox',
-    id = 'select_all',
-    checked = 'checked',
-    onchange = 'selectAll(this)'
-  ),
-  'Selecionar todos',
-  purrr::map(struct_empresas$EMPRESA, \(x) {
-    div(
-      tags$input(
-        type = 'checkbox',
-        name = 'checkboxes',
-        value = x,
-        checked = 'checked'
+        }), collapse = ""
       ),
-      x
-    )
-  }),
-  tags$script(
-    "
-    function selectAll(source) {
-      var checkboxes = document.getElementsByName('checkboxes');
-      for(var i = 0; i < checkboxes.length; i++) {
-        checkboxes[i].checked = source.checked;
+    '</div>
+  </div>
+  <script>
+    var select_all_checkbox = document.getElementById("select_all");
+    var checkboxes = document.getElementsByName("checkboxes");
+    select_all_checkbox.addEventListener("change", function() {
+      for (var i = 0; i < checkboxes.length; i++) {
+        checkboxes[i].checked = this.checked;
+      }
+      updateTable();
+    });
+    checkboxes.forEach(function(checkbox) {
+      checkbox.addEventListener("change", function() {
+        var all_checked = true;
+        checkboxes.forEach(function(cb) {
+          if (!cb.checked) {
+            all_checked = false;
+          }
+        });
+        select_all_checkbox.checked = all_checked;
+        updateTable();
+      });
+    });
+    
+    function updateTable() {
+      var selected_companies = [];
+      checkboxes.forEach(function(checkbox) {
+        if (checkbox.checked) {
+          selected_companies.push(checkbox.value);
+        }
+      });
+      
+      var tbl = document.getElementById("liq_periodo_01");
+      var rows = tbl.getElementsByTagName("tr");
+      for (var i = 1; i < rows.length; i++) {
+        var companyName = rows[i].cells[0].innerHTML;
+        if (selected_companies.includes(companyName)) {
+          rows[i].style.display = "";
+        } else {
+          rows[i].style.display = "none";
+        }
       }
     }
-    "
-  )
+  </script>'
 )
 
 
@@ -136,9 +131,11 @@ DT::datatable(
       'background-color': '#B52730', 
       'color': '#fff'});","}"),
     width = '100%',
-     
     align = 'center'
-    ))
+    ),
+  elementId = "liq_periodo_01"
+)
+
 ```
 :::
 
