@@ -32,6 +32,13 @@ BP <- bind_rows(BP, BP2)
 
 ## Salvando a estrutura das DFs, para consulta
 
+### PERIODOS
+length(unique(BP$PERIODO))
+sort(unique(BP$PERIODO))
+length(unique(DRE$PERIODO))
+sort(unique(DRE$PERIODO))
+struct_empresas <- unique(select(BP, CD_CVM, EMPRESA))
+
 ### EMPRESAS
 length(unique(BP$CD_CVM))
 length(unique(DRE$CD_CVM))
@@ -41,7 +48,8 @@ struct_empresas <- unique(select(BP, CD_CVM, EMPRESA))
 struc_BP <- unique(select(BP, CD_CONTA, CONTA))
 colnames(BP)
 
-BP <- select(BP, EMPRESA, CD_CONTA, PERIODO, VL_CONTA) %>%
+BP <- select(BP, CD_CVM, EMPRESA, CD_CONTA, PERIODO, VL_CONTA) %>% 
+  # será mantido o CD_CVM para criar um ID junto com o PERIODO
   filter(VL_CONTA != 0) %>%
   arrange(CD_CONTA) %>%
   pivot_wider(names_from = CD_CONTA, values_from = VL_CONTA) %>%
@@ -50,11 +58,11 @@ BP <- select(BP, EMPRESA, CD_CONTA, PERIODO, VL_CONTA) %>%
 ### DRE
 struc_DRE <- unique(select(DRE, CD_CONTA, CONTA))
 colnames(DRE)
-DRE <- select(DRE, EMPRESA, CD_CONTA, PERIODO, VL_CONTA)
+# DRE <- select(DRE, EMPRESA, CD_CONTA, PERIODO, VL_CONTA)
 
 ############### INDICADORES #################
 # LIQUIDEZ
-ind_liquidez <- BP[c("EMPRESA", "PERIODO",
+ind_liquidez <- BP[c("CD_CVM", "EMPRESA", "PERIODO",
                      "1.01",
                      "1.01.01",
                      "1.01.02",
@@ -70,8 +78,10 @@ ind_liquidez$liq_seca <- round((ind_liquidez$`1.01` - ind_liquidez$`1.01.04`) / 
 ind_liquidez$liq_imediata <- round((ind_liquidez$`1.01.01` + ind_liquidez$`1.01.02`) / ind_liquidez$`2.01`, 2)
 
 colnames(ind_liquidez)
-ind_liquidez <- select(ind_liquidez, EMPRESA, PERIODO,
+ind_liquidez <- select(ind_liquidez, CD_CVM, EMPRESA, PERIODO,
                        liq_geral, liq_corrente, liq_seca, liq_seca, liq_imediata)
+
+
 # ENDIVIDAMENTO
 ind_endividamento <- BP[c("EMPRESA", "PERIODO",
                           "1",

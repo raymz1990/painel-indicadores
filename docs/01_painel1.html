@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -74,6 +40,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="site_libs/quarto-dashboard/quarto-dashboard.js"></script>
+<script src="site_libs/quarto-dashboard/stickythead.js"></script>
+<script src="site_libs/quarto-dashboard/datatables.min.js" kdttablesentinel="true"></script>
+<script src="site_libs/quarto-dashboard/pdfmake.min.js" kdttablesentinel="true"></script>
+<script src="site_libs/quarto-dashboard/vfs_fonts.js" kdttablesentinel="true"></script>
+<script src="site_libs/quarto-dashboard/web-components.js" type="module"></script>
+<script src="site_libs/quarto-dashboard/components.js"></script>
+<link href="site_libs/quarto-dashboard/datatables.min.css" rel="stylesheet" kdttablesentinel="true">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -112,10 +86,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 
 
-<link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="quarto-dashboard nav-fixed dashboard-fill dashboard-sidebar fullcontent">
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -130,90 +104,149 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
         <div class="quarto-navbar-tools">
-  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
           <div id="quarto-search" class="" title="Search"></div>
       </div> <!-- /container-fluid -->
     </nav>
-</header>
+<header id="quarto-dashboard-header">
+<nav class="navbar navbar-expand-md slim" data-bs-theme="dark">
+  <div class="navbar-container container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-controls="dashboard-collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>    
+
+
+<div id="dashboard-collapse" class="navbar-collapse collapse"><ul class="navbar-nav navbar-nav-scroll me-auto" role="tablist"><li class="nav-item" role="presentation"><a id="tab-indicadores" class="nav-link active" data-bs-toggle="tab" role="tab" data-bs-target="#indicadores" data-scrolling="false" href="#indicadores" aria-controls="indicadores" aria-selected="true"><span class="nav-link-text">Indicadores</span></a></li></ul></div></div></nav>
+</header></header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar quarto-dashboard-content bslib-gap-spacing html-fill-container bslib-page-fill quarto-dashboard-pages">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#interactive-selection" id="toc-interactive-selection" class="nav-link active" data-scroll-target="#interactive-selection">Interactive Selection</a>
-  <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
-  <li><a href="#main-body" id="toc-main-body" class="nav-link" data-scroll-target="#main-body">Main Body</a>
-  <ul class="collapse">
-  <li><a href="#first-row" id="toc-first-row" class="nav-link" data-scroll-target="#first-row">First row</a></li>
-  </ul></li>
-  </ul></li>
-  </ul>
-</nav>
-    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+
+<div class="bslib-grid-item html-fill-item tab-content bslib-grid" data-layout="fill" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div id="indicadores" class="dashboard-page tab-pane show active html-fill-item html-fill-container dashboard-sidebar-container" data-orientation="rows" aria-labelledby="tab-indicadores">
+<div class="bslib-sidebar-layout html-fill-item html-fill-container" data-bslib-sidebar-open="desktop" data-bslib-sidebar-init="true" data-bslib-sidebar-border="false" data-bslib-sidebar-border-radius="false"><div class="main html-fill-container html-fill-item"><div class="sidebar-content html-fill-item html-fill-container">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-rows: minmax(3em, 70fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="html-fill-item html-fill-container bslib-grid" style="display: grid; grid-template-columns: minmax(3em, 1fr);
+grid-auto-rows: minmax(0, 1fr);">
+<div class="card tabset html-fill-item html-fill-container bslib-card" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header dashboard-card-no-title bslib-navs-card-title">
+
+<ul class="nav nav-tabs card-header-tabs" role="tablist" data-tabsetid="card-tabset-1"><li class="nav-item" role="presentation"><a href="#card-tabset-1-1" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="4T23" aria-selected="true" class="nav-link active">4T23</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-2" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="3T23" aria-selected="false" class="nav-link">3T23</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-3" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="2T23" aria-selected="false" class="nav-link">2T23</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-4" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="1T23" aria-selected="false" class="nav-link">1T23</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-5" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="4T22" aria-selected="false" class="nav-link">4T22</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-6" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="3T22" aria-selected="false" class="nav-link">3T22</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-7" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="2T22" aria-selected="false" class="nav-link">2T22</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-8" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="1T22" aria-selected="false" class="nav-link">1T22</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-9" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="4T21" aria-selected="false" class="nav-link">4T21</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-10" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="3T21" aria-selected="false" class="nav-link">3T21</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-11" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="2T21" aria-selected="false" class="nav-link">2T21</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-12" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="1T21" aria-selected="false" class="nav-link">1T21</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-13" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="4T20" aria-selected="false" class="nav-link">4T20</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-14" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="3T20" aria-selected="false" class="nav-link">3T20</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-15" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="2T20" aria-selected="false" class="nav-link">2T20</a></li><li class="nav-item" role="presentation"><a href="#card-tabset-1-16" role="tab" data-toggle="tab" data-bs-toggle="tab" data-value="1T20" aria-selected="false" class="nav-link">1T20</a></li></ul></div>
 
 
 
 
-<section id="interactive-selection" class="level1">
-<h1>Interactive Selection</h1>
-<section id="section" class="level2 sidebar">
-<h2 class="sidebar anchored" data-anchor-id="section"></h2>
-<div class="cell" data-context="setup">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(purrr)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggiraph)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(htmltools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'htmltools'</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="3ade8a4a-fb1d-4a6c-8409-ac45482d5fc9" class="hidden html-fill-item html-fill-container">
+
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following object is masked from 'package:pander':
-
-    p</code></pre>
+<div class="tab-content html-fill-item html-fill-container" data-tabset-id="card-tabset-1"><div class="tab-pane active show html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-1"><div class="card-body html-fill-item html-fill-container" data-title="4T23">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="datatables html-widget html-fill-item html-fill-container" id="liq_periodo_01" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="liq_periodo_01">{"x":{"filter":"none","vertical":false,"data":[["Kallas","Metrocasa"],["1,74","1,30"],["2,97","1,63"],["2,97","1,11"],["0,24","0,27"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"dom":"ifrt","language":{"info":"Showing _TOTAL_ entries"},"pageLength":10,"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reactable)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>color_palette <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"#E69F00"</span>, <span class="st">"#009E73"</span>, <span class="st">"#0072B2"</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(color_palette) <span class="ot">&lt;-</span> <span class="fu">unique</span>(palmerpenguins<span class="sc">::</span>penguins<span class="sc">$</span>species)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-2"><div class="card-body html-fill-item html-fill-container" data-title="3T23">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="datatables html-widget html-fill-item html-fill-container" id="htmlwidget-bdcf5d63edda1e37f6c7" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-bdcf5d63edda1e37f6c7">{"x":{"filter":"none","vertical":false,"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Metrocasa","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,29","0,16","6,22","1,82","1,10","0,90","4,48","1,11","1,44","1,85","1,70","0,75","0,99","1,16","1,49","2,05","1,17","1,35","0,41","2,39","1,34","1,46","2,42","1,36","2,13","0,56","5,17","1,64","1,46","0,41","0,32","1,29","1,03","1,17","1,69","2,10"],["2,03","0,22","0,73","2,65","2,97","2,85","5,19","1,99","2,34","2,82","3,38","1,29","0,83","3,09","2,69","3,08","1,53","3,56","0,28","2,06","1,82","2,96","3,44","1,07","5,85","0,78","5,22","3,51","3,03","1,69","0,22","1,55","1,04","1,31","2,93","2,44"],["0,71","0,06","0,58","1,17","1,42","1,49","2,16","1,13","1,71","1,32","3,38","0,46","0,36","1,10","1,73","3,08","0,92","2,16","0,28","2,06","1,13","2,96","2,08","0,76","2,00","0,12","0,73","1,55","0,97","1,13","0,06","1,07","0,50","0,98","1,88","1,95"],["0,15","0,02","0,35","0,14","0,63","0,48","1,57","0,14","1,12","0,35","0,35","0,08","0,06","0,23","0,60","0,69","0,21","1,42","0,10","0,50","0,49","0,60","1,08","0,36","0,72","0,03","0,48","0,61","0,24","0,48","0,01","0,13","0,18","0,46","0,88","1,10"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"dom":"ifrt","language":{"info":"Showing _TOTAL_ entries"},"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">HTML</span>(<span class="st">'</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="st">  &lt;div&gt;</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;div style="font-weight:600"&gt;Empresas&lt;/div&gt;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;div id="checkboxes_div"&gt;</span></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="st">      &lt;input type="checkbox" id="select_all" checked&gt;</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="st">      &lt;label for="select_all"&gt;Selecionar todos&lt;/label&gt;</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="st">      '</span>, </span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>      <span class="fu">paste0</span>(</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        <span class="fu">lapply</span>(struct_empresas<span class="sc">$</span>EMPRESA, <span class="cf">function</span>(x) {</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>          <span class="fu">paste0</span>(</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>            <span class="st">'&lt;input type="checkbox" name="checkboxes" value="'</span>, x, <span class="st">'" checked&gt;'</span>,</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>            x</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>          )</span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        }), <span class="at">collapse =</span> <span class="st">""</span></span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>      ),</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'&lt;/div&gt;</span></span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="st">  &lt;/div&gt;</span></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="st">  &lt;script&gt;</span></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="st">    var select_all_checkbox = document.getElementById("select_all");</span></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a><span class="st">    var checkboxes = document.getElementsByName("checkboxes");</span></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a><span class="st">    select_all_checkbox.addEventListener("change", function() {</span></span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="st">      for (var i = 0; i &lt; checkboxes.length; i++) {</span></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="st">        checkboxes[i].checked = this.checked;</span></span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="st">      }</span></span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a><span class="st">    });</span></span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="st">  &lt;/script&gt;'</span></span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-3"><div class="card-body html-fill-item html-fill-container" data-title="2T23">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="datatables html-widget html-fill-item html-fill-container" id="htmlwidget-1168408b1f7716ce4a1b" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-1168408b1f7716ce4a1b">{"x":{"filter":"none","vertical":false,"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Metrocasa","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,30","0,17","6,25","1,92","1,16","0,92","4,82","1,10","1,56","1,86","1,68","0,72","0,93","1,16","1,50","2,14","1,15","1,25","0,46","2,12","1,35","1,36","2,68","1,21","2,25","0,59","5,27","1,69","1,47","0,43","0,34","1,32","1,02","1,12","1,65","2,18"],["2,32","0,24","3,03","2,85","3,54","3,42","5,14","2,06","2,77","2,83","2,66","1,65","1,04","3,51","2,76","3,11","1,08","3,61","0,32","2,33","1,83","3,27","4,33","1,30","4,77","0,85","2,76","2,92","3,62","1,82","0,24","1,71","1,09","1,39","2,65","3,01"],["0,82","0,07","1,83","1,41","1,59","1,89","2,42","1,18","2,00","1,31","2,66","0,51","0,50","1,21","1,78","3,11","0,65","2,10","0,32","2,33","1,18","3,27","2,50","0,98","1,88","0,16","0,54","1,23","1,15","0,91","0,06","1,00","0,62","0,97","1,67","2,30"],["0,20","0,02","1,15","0,30","0,69","0,75","1,72","0,11","1,06","0,40","0,41","0,16","0,09","0,22","0,64","0,65","0,17","1,23","0,12","0,57","0,53","0,65","1,49","0,36","0,76","0,02","0,31","0,51","0,41","0,36","0,01","0,09","0,20","0,46","0,86","1,21"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"dom":"ifrt","language":{"info":"Showing _TOTAL_ entries"},"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-4"><div class="card-body html-fill-item html-fill-container" data-title="1T23">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="datatables html-widget html-fill-item html-fill-container" id="htmlwidget-60f3ef5986b97da60b3f" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-60f3ef5986b97da60b3f">{"x":{"filter":"none","vertical":false,"data":[["Tenda","Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Metrocasa","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Cyrela","Pacaembu"],["1,12","1,30","0,18","6,45","1,88","1,15","0,91","4,85","1,10","1,47","1,88","1,74","0,71","0,94","1,17","1,51","2,30","1,16","1,24","0,55","2,06","1,40","1,35","2,62","2,07","2,39","0,59","5,31","1,69","1,47","0,58","0,35","1,35","1,07","1,62","2,07"],["1,12","2,10","0,25","5,02","2,75","3,75","3,78","5,48","1,80","2,77","3,71","2,95","1,25","1,14","4,89","2,89","3,86","0,69","3,43","0,52","2,46","2,12","3,06","4,59","3,29","4,35","0,88","1,51","2,73","3,14","1,72","0,25","1,54","1,18","2,65","3,25"],["0,87","0,80","0,08","3,37","1,33","1,58","2,32","2,48","0,98","1,91","1,59","2,95","0,29","0,42","1,73","1,91","1,97","0,43","2,04","0,52","2,46","1,32","3,06","2,36","2,34","1,87","0,18","0,35","1,19","0,88","1,08","0,06","0,94","0,72","1,62","2,43"],["0,38","0,24","0,03","2,42","0,38","0,80","1,00","1,74","0,18","0,95","0,54","0,23","0,06","0,08","0,39","0,68","0,74","0,04","1,23","0,11","0,55","0,59","0,53","1,45","0,71","0,74","0,01","0,19","0,49","0,27","0,40","0,01","0,11","0,25","0,86","1,31"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"dom":"ifrt","language":{"info":"Showing _TOTAL_ entries"},"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-5"><div class="card-body html-fill-item html-fill-container" data-title="4T22">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="datatables html-widget html-fill-item html-fill-container" id="htmlwidget-ade5352c0de95de0e18c" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-ade5352c0de95de0e18c">{"x":{"filter":"none","vertical":false,"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Metrocasa","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,29","0,19","6,69","1,91","1,10","0,92","4,97","1,08","1,39","1,87","1,77","0,75","0,95","1,18","1,51","2,26","1,17","1,23","0,57","2,01","1,40","1,32","2,79","2,09","2,29","0,57","5,99","1,67","1,45","0,60","0,36","1,36","0,65","1,13","1,58","2,03"],["2,10","0,27","1,69","2,84","3,64","4,21","4,91","2,03","1,93","4,00","3,19","1,30","0,88","3,79","2,78","3,06","1,40","3,02","0,55","2,30","2,75","3,44","4,53","3,42","4,07","0,84","1,61","2,48","3,04","1,65","0,26","1,58","0,51","1,36","2,48","3,74"],["0,76","0,09","1,20","1,27","1,51","2,70","2,37","1,13","1,43","1,78","3,19","0,42","0,36","1,34","1,76","3,06","0,87","1,98","0,55","2,30","1,81","3,44","2,18","2,05","1,95","0,15","0,46","1,00","0,88","0,94","0,07","1,00","0,31","0,93","1,44","2,73"],["0,24","0,03","0,82","0,43","0,85","1,20","1,62","0,14","0,74","0,73","0,43","0,14","0,10","0,32","0,66","0,59","0,21","1,29","0,14","0,40","0,98","0,80","1,28","0,74","0,77","0,01","0,26","0,47","0,34","0,37","0,01","0,15","0,10","0,46","0,77","1,41"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"dom":"ifrt","language":{"info":"Showing _TOTAL_ entries"},"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-6"><div class="card-body html-fill-item html-fill-container" data-title="3T22">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="datatables html-widget html-fill-item html-fill-container" id="htmlwidget-33340bd8268d45a0195c" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-33340bd8268d45a0195c">{"x":{"filter":"none","vertical":false,"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,25","0,19","6,78","1,92","1,12","0,95","5,09","1,14","1,39","2,15","1,82","0,81","0,97","1,16","1,50","2,41","1,15","1,26","0,59","2,18","1,43","1,34","3,15","2,17","0,59","6,84","1,73","1,42","0,67","0,47","1,37","0,63","1,17","1,57","2,03"],["1,93","0,29","1,34","2,92","3,12","3,51","5,47","2,10","2,05","3,93","3,92","1,54","1,11","3,34","2,50","2,31","1,41","3,92","0,69","3,75","1,77","4,51","3,65","4,80","0,86","2,28","2,48","2,95","2,44","0,27","1,43","0,51","1,34","2,59","3,28"],["0,76","0,10","1,34","1,40","1,07","2,39","2,81","1,22","1,57","1,38","3,92","0,60","0,53","1,22","1,53","2,31","0,82","2,27","0,69","3,75","1,19","4,51","1,80","2,17","0,17","0,53","0,91","0,85","1,51","0,09","0,90","0,27","1,09","1,59","2,47"],["0,28","0,03","0,97","0,62","0,53","1,01","2,04","0,14","0,64","0,62","0,77","0,14","0,19","0,31","0,55","0,49","0,17","1,41","0,14","0,85","0,63","1,00","1,19","0,95","0,01","0,43","0,39","0,29","0,52","0,01","0,12","0,04","0,52","0,84","1,24"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"dom":"ifrt","language":{"info":"Showing _TOTAL_ entries"},"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-7"><div class="card-body html-fill-item html-fill-container" data-title="2T22">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="datatables html-widget html-fill-item html-fill-container" id="htmlwidget-3df12bd9ce96e77ed4a3" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-3df12bd9ce96e77ed4a3">{"x":{"filter":"none","vertical":false,"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,35","0,20","6,85","2,19","1,10","0,94","5,31","1,20","1,32","2,18","1,99","0,79","0,95","1,20","1,51","2,53","1,14","1,30","0,63","1,96","1,42","1,32","3,27","2,20","0,60","6,66","1,76","1,49","0,72","0,49","1,38","0,60","1,23","1,60","2,08"],["2,23","0,30","1,58","3,41","3,31","3,24","6,35","2,47","1,55","3,54","4,95","1,60","1,29","3,24","2,53","2,52","1,10","4,64","0,45","4,55","1,61","4,64","3,85","5,66","0,85","1,87","2,21","2,75","3,58","0,29","1,73","0,44","1,55","2,90","3,63"],["0,94","0,10","1,57","1,60","1,08","2,38","3,50","1,46","1,24","1,39","4,95","0,77","0,49","1,28","1,29","2,52","0,91","2,60","0,45","4,55","0,87","4,64","2,00","3,12","0,17","0,61","1,10","0,79","1,37","0,10","0,97","0,21","1,14","1,65","2,74"],["0,35","0,03","1,21","0,60","0,67","1,18","2,58","0,34","0,49","0,73","1,07","0,28","0,25","0,33","0,46","0,59","0,17","1,49","0,07","0,66","0,42","1,10","1,33","1,25","0,02","0,54","0,46","0,31","0,28","0,00","0,15","0,06","0,57","0,86","1,46"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"dom":"ifrt","language":{"info":"Showing _TOTAL_ entries"},"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-8"><div class="card-body html-fill-item html-fill-container" data-title="1T22">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="datatables html-widget html-fill-item html-fill-container" id="htmlwidget-556b96b8214664b89ee0" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-556b96b8214664b89ee0">{"x":{"filter":"none","vertical":false,"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,40","0,19","6,89","2,57","1,06","0,88","7,65","1,19","1,31","2,18","2,02","0,80","0,93","1,20","1,50","2,62","1,15","1,29","0,67","2,35","1,51","1,30","3,43","2,10","0,61","6,97","1,75","1,49","0,71","0,51","1,42","0,59","1,27","1,64","2,20"],["2,24","0,32","1,87","3,37","3,14","2,57","6,17","2,67","1,49","3,72","4,48","1,72","1,49","3,33","2,19","2,67","1,13","4,88","0,83","6,81","1,61","4,90","3,67","4,97","0,86","2,69","1,90","2,98","1,97","0,31","1,82","0,46","1,91","3,13","4,43"],["0,97","0,10","1,86","1,47","1,03","2,16","3,28","1,49","1,17","1,44","4,48","0,81","0,51","1,39","1,01","2,67","0,75","2,79","0,83","6,81","0,97","4,90","2,03","2,85","0,18","0,58","0,92","0,86","0,59","0,13","0,96","0,24","1,23","1,67","3,46"],["0,43","0,03","1,20","0,53","0,73","0,87","2,31","0,37","0,43","0,71","0,76","0,41","0,19","0,25","0,36","0,59","0,14","1,70","0,11","1,10","0,55","1,11","1,39","1,21","0,02","0,43","0,38","0,39","0,03","0,00","0,10","0,12","0,60","0,85","1,74"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"dom":"ifrt","language":{"info":"Showing _TOTAL_ entries"},"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-9"><div class="card-body html-fill-item html-fill-container" data-title="4T21">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="datatables html-widget html-fill-item html-fill-container" id="htmlwidget-5ccaf8cabe230a104cb7" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-5ccaf8cabe230a104cb7">{"x":{"filter":"none","vertical":false,"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,42","0,19","7,25","2,64","1,05","0,88","6,49","1,24","1,33","2,10","2,02","0,87","0,91","1,20","1,44","2,57","1,15","1,29","0,71","2,29","1,50","1,32","3,45","2,09","0,63","6,99","1,76","1,52","0,69","0,57","1,42","0,61","1,29","1,65","2,30"],["2,13","0,34","2,11","3,27","3,14","2,42","4,69","2,38","1,68","3,51","5,57","1,66","1,36","3,01","1,85","2,54","1,17","5,75","0,97","5,90","1,69","4,78","3,17","4,47","0,86","3,87","1,88","3,15","1,99","0,27","2,03","0,45","2,20","3,11","6,02"],["0,90","0,11","2,09","1,55","1,01","2,09","2,72","1,29","1,24","1,72","5,57","0,67","0,44","1,17","0,78","2,54","0,84","3,27","0,97","5,90","0,98","4,78","2,08","2,81","0,19","1,50","0,95","1,03","0,80","0,10","1,01","0,27","1,43","1,74","4,65"],["0,45","0,03","1,44","0,68","0,72","1,04","1,91","0,24","0,62","0,87","1,19","0,29","0,18","0,34","0,28","0,60","0,28","2,11","0,18","1,09","0,54","1,22","1,30","1,10","0,02","1,33","0,41","0,44","0,48","0,01","0,12","0,18","0,83","0,98","2,61"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"dom":"ifrt","language":{"info":"Showing _TOTAL_ entries"},"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-10"><div class="card-body html-fill-item html-fill-container" data-title="3T21">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="datatables html-widget html-fill-item html-fill-container" id="htmlwidget-dede7399f3759c1fbaa7" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-dede7399f3759c1fbaa7">{"x":{"filter":"none","vertical":false,"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,57","0,20","9,16","2,93","1,07","0,93","7,77","1,27","1,49","2,17","2,09","0,78","0,97","1,26","1,51","2,64","1,12","1,27","0,78","2,33","1,43","1,37","3,84","2,26","0,66","6,11","1,77","1,62","0,61","0,65","1,46","0,77","1,40","1,66","2,39"],["2,44","0,29","2,79","3,33","2,81","2,87","6,45","2,17","2,15","3,50","5,73","1,80","1,37","2,94","1,93","2,69","1,27","4,68","1,13","6,52","1,80","6,40","4,42","4,45","0,88","3,64","2,00","2,76","2,25","0,29","2,08","0,64","2,56","3,41","2,89"],["0,94","0,10","2,76","2,01","1,02","2,14","3,91","1,22","1,70","1,70","5,73","0,90","0,43","1,26","0,87","2,69","0,54","2,64","1,13","6,52","0,87","6,40","3,13","2,75","0,18","0,78","0,90","0,90","0,89","0,20","1,16","0,40","1,77","1,92","2,33"],["0,38","0,04","2,00","1,14","0,73","1,05","3,00","0,27","0,73","0,78","1,32","0,39","0,14","0,43","0,33","0,84","0,15","1,74","0,26","1,74","0,51","1,32","2,17","1,17","0,02","0,50","0,49","0,35","0,36","0,01","0,10","0,26","0,96","1,04","1,49"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"dom":"ifrt","language":{"info":"Showing _TOTAL_ entries"},"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-11"><div class="card-body html-fill-item html-fill-container" data-title="2T21">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="datatables html-widget html-fill-item html-fill-container" id="htmlwidget-d0f8d7ee0da484c5cb70" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-d0f8d7ee0da484c5cb70">{"x":{"filter":"none","vertical":false,"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,46","0,21","9,15","3,63","1,11","0,93","8,36","1,27","1,47","2,28","2,32","0,91","0,95","1,30","1,54","2,90","1,14","1,26","0,85","4,00","1,51","1,33","3,97","2,21","0,68","6,17","1,81","1,56","0,60","0,69","1,48","0,64","1,42","1,67","2,43"],["1,75","0,32","2,82","3,67","2,81","3,14","7,38","2,26","1,80","3,20","4,70","2,00","1,37","3,35","2,20","3,08","1,26","5,35","1,17","5,18","2,06","6,95","5,24","3,44","0,90","3,86","2,23","3,09","2,60","0,31","2,09","0,44","2,80","3,43","3,05"],["0,76","0,10","2,81","2,63","0,97","2,63","4,43","1,27","1,46","1,59","4,70","0,93","0,43","1,37","0,92","3,08","0,43","2,87","0,71","5,18","1,22","3,00","4,12","2,15","0,19","1,01","1,11","1,13","1,44","0,22","1,25","0,31","1,61","1,95","2,58"],["0,32","0,04","2,09","1,82","0,63","1,49","3,36","0,28","0,53","0,68","0,52","0,44","0,16","0,46","0,29","1,19","0,08","1,88","0,35","0,81","0,72","1,57","2,96","0,89","0,01","0,76","0,66","0,44","0,45","0,02","0,14","0,20","0,96","1,06","1,85"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"dom":"ifrt","language":{"info":"Showing _TOTAL_ entries"},"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-12"><div class="card-body html-fill-item html-fill-container" data-title="1T21">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="datatables html-widget html-fill-item html-fill-container" id="htmlwidget-78b1a96ec05a6f627ca8" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-78b1a96ec05a6f627ca8">{"x":{"filter":"none","vertical":false,"editable":{"target":"cell","disable":{"columns":null},"numeric":[],"date":[]},"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,40","0,22","8,66","3,94","1,17","0,85","7,51","1,25","1,53","2,27","2,17","0,94","0,95","1,28","1,58","2,89","1,14","1,31","0,88","2,39","1,58","1,31","4,53","2,30","0,70","5,86","1,84","1,55","0,57","0,66","1,49","0,55","1,46","1,67","2,38"],["1,42","0,36","2,74","4,29","2,14","2,35","6,23","2,16","2,18","3,50","4,32","2,18","1,34","2,21","2,04","3,10","1,31","4,92","1,31","2,55","1,84","5,68","5,04","3,05","0,91","5,15","2,43","3,41","2,20","0,32","1,89","0,30","2,88","2,78","3,70"],["0,72","0,10","2,55","3,51","1,09","2,05","3,81","1,20","1,66","1,93","4,32","1,19","0,47","0,86","0,74","3,10","0,49","2,55","1,31","2,55","0,97","2,73","4,05","1,78","0,20","1,76","1,27","1,11","0,74","0,23","1,19","0,17","1,99","1,61","3,23"],["0,36","0,04","1,91","2,79","0,85","1,36","2,94","0,28","0,59","0,84","0,52","0,35","0,20","0,31","0,25","1,29","0,14","1,75","0,42","0,68","0,48","1,40","3,11","0,83","0,01","1,50","0,79","0,47","0,13","0,03","0,15","0,08","1,04","0,85","2,32"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"dom":"ifrt","language":{"info":"Showing _TOTAL_ entries"},"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-13"><div class="card-body html-fill-item html-fill-container" data-title="4T20">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="datatables html-widget html-fill-item html-fill-container" id="htmlwidget-c20ac5f39b651c713c8b" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-c20ac5f39b651c713c8b">{"x":{"filter":"none","vertical":false,"editable":{"target":"cell","disable":{"columns":null},"numeric":[],"date":[]},"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,50","0,24","8,63","4,16","1,19","0,81","7,41","1,28","1,60","2,17","2,30","0,94","0,94","1,38","1,62","3,01","1,14","1,31","0,91","2,40","1,65","1,31","4,27","2,18","0,71","5,84","1,91","1,50","0,60","0,67","1,56","0,57","1,49","1,65","2,37"],["1,73","0,38","2,89","5,09","2,35","1,72","5,50","2,37","2,25","3,68","4,25","2,33","1,25","2,91","2,12","3,15","1,47","4,66","1,50","2,53","1,97","5,92","4,77","3,33","0,93","5,70","2,30","3,12","2,56","0,33","1,97","0,32","2,27","2,88","3,97"],["0,89","0,10","2,71","4,38","1,09","1,50","3,56","1,33","1,80","2,21","4,25","1,17","0,48","1,20","0,70","3,15","0,68","2,44","1,50","2,53","0,94","5,92","3,87","2,00","0,20","3,42","1,26","1,09","1,03","0,23","1,33","0,16","1,63","1,59","3,62"],["0,42","0,03","1,91","3,61","0,81","0,97","2,76","0,30","0,72","1,05","0,63","0,26","0,34","0,41","0,14","1,39","0,35","1,62","0,55","0,84","0,38","1,33","3,15","0,95","0,01","3,12","0,78","0,44","0,42","0,03","0,21","0,08","1,07","0,87","2,65"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"dom":"ifrt","language":{"info":"Showing _TOTAL_ entries"},"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-14"><div class="card-body html-fill-item html-fill-container" data-title="3T20">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="datatables html-widget html-fill-item html-fill-container" id="htmlwidget-ad9d66d0b52aff5c18ce" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-ad9d66d0b52aff5c18ce">{"x":{"filter":"none","vertical":false,"editable":{"target":"cell","disable":{"columns":null},"numeric":[],"date":[]},"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Patrimar","Plano &amp; Plano","Lavvi","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,63","0,24","10,19","4,24","1,22","0,76","9,39","1,29","1,51","2,49","1,01","1,41","1,60","2,51","1,20","1,34","0,81","1,84","1,28","4,75","0,74","60,91","1,84","1,45","0,66","0,60","1,55","0,64","1,51","1,90","2,24"],["1,84","0,36","4,89","5,12","1,79","2,60","6,75","2,52","1,89","3,48","1,58","2,33","2,33","2,72","1,46","4,44","1,20","1,95","6,26","6,48","0,98","38,88","2,73","3,38","4,44","0,38","1,83","0,43","2,93","3,01","4,72"],["0,92","0,09","4,27","4,31","1,01","2,33","4,68","1,44","1,61","1,93","0,66","1,16","0,83","2,72","0,95","2,78","1,20","1,01","2,90","5,31","0,23","29,58","1,51","1,31","1,86","0,24","1,20","0,13","1,95","1,89","4,15"],["0,44","0,03","3,22","3,56","0,72","1,55","3,80","0,31","0,75","0,80","0,33","0,37","0,12","1,41","0,20","2,00","0,15","0,30","2,02","4,47","0,01","28,02","0,87","0,67","1,31","0,03","0,27","0,06","1,34","1,06","3,04"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"dom":"ifrt","language":{"info":"Showing _TOTAL_ entries"},"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-15"><div class="card-body html-fill-item html-fill-container" data-title="2T20">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="datatables html-widget html-fill-item html-fill-container" id="htmlwidget-d2dd4a151c2bfc01af2c" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-d2dd4a151c2bfc01af2c">{"x":{"filter":"none","vertical":false,"editable":{"target":"cell","disable":{"columns":null},"numeric":[],"date":[]},"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Patrimar","Plano &amp; Plano","Lavvi","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,62","0,25","7,63","4,62","1,28","0,60","8,95","1,31","1,38","2,33","2,12","1,01","1,43","1,59","1,73","1,16","1,38","0,84","1,82","1,18","1,76","0,75","46,39","1,66","1,45","0,62","0,63","1,49","0,74","1,46","1,79","2,21"],["1,76","0,36","2,82","6,41","1,78","2,44","6,15","2,53","1,89","3,15","4,12","1,62","2,82","2,21","1,81","1,25","4,24","1,27","2,11","5,68","2,10","1,02","15,15","3,02","3,24","3,11","0,40","1,79","0,44","2,94","2,36","5,25"],["1,03","0,09","2,75","5,94","1,00","2,08","4,41","1,42","1,59","1,89","4,12","0,53","1,53","0,84","1,81","0,59","2,33","1,27","0,92","2,56","0,89","0,24","4,32","1,46","1,09","0,47","0,25","1,20","0,09","2,10","1,28","4,45"],["0,49","0,03","2,28","5,05","0,73","1,29","3,72","0,52","0,68","0,84","0,13","0,22","0,63","0,22","0,47","0,11","1,49","0,12","0,18","1,56","0,18","0,01","2,75","0,66","0,62","0,07","0,02","0,25","0,03","1,46","0,64","3,27"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"dom":"ifrt","language":{"info":"Showing _TOTAL_ entries"},"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+</div>
+</div></div><div class="tab-pane html-fill-item html-fill-container" role="tabpanel" id="card-tabset-1-16"><div class="card-body html-fill-item html-fill-container" data-title="1T20">
+<div class="cell-output-display html-fill-item html-fill-container">
+<div class="datatables html-widget html-fill-item html-fill-container" id="htmlwidget-34c3c523c11e9255f6af" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-34c3c523c11e9255f6af">{"x":{"filter":"none","vertical":false,"editable":{"target":"cell","disable":{"columns":null},"numeric":[],"date":[]},"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Patrimar","Plano &amp; Plano","Lavvi","João Fortes","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,44","0,26","4,33","4,25","1,33","0,56","8,66","1,34","1,39","2,42","1,43","1,03","1,47","1,68","1,81","1,14","1,36","0,93","1,78","1,17","1,67","0,77","1,62","1,44","0,63","0,64","1,56","0,76","1,56","1,85","3,48"],["1,70","0,38","2,61","6,39","1,73","2,09","6,18","2,49","1,98","3,18","5,74","2,09","3,37","2,64","1,88","1,15","4,24","1,56","1,99","4,83","1,91","1,04","2,48","3,29","3,39","0,42","2,43","0,44","2,93","2,38","4,32"],["0,94","0,09","2,43","5,90","0,91","1,56","4,41","1,26","1,58","1,86","5,74","1,04","1,85","1,03","1,88","0,35","2,31","1,56","0,87","2,16","0,73","0,25","1,26","1,03","0,33","0,27","1,39","0,07","1,85","1,17","3,22"],["0,35","0,03","1,81","5,16","0,63","1,02","3,57","0,31","0,63","0,90","0,35","0,45","0,68","0,26","0,34","0,06","1,46","0,14","0,32","1,17","0,22","0,01","0,64","0,57","0,07","0,03","0,20","0,01","1,16","0,55","1,95"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"dom":"Bfrtip","language":{"info":"Showing _TOTAL_ entries"},"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","buttons":["copy","csv","excel","pdf","print"],"columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+</div>
+</div></div></div><bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
+    <template>Expand</template>
+    <span class="bslib-full-screen-enter badge rounded-pill">
+        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="height:1em;width:1em;" aria-hidden="true" role="img"><path d="M20 5C20 4.4 19.6 4 19 4H13C12.4 4 12 3.6 12 3C12 2.4 12.4 2 13 2H21C21.6 2 22 2.4 22 3V11C22 11.6 21.6 12 21 12C20.4 12 20 11.6 20 11V5ZM4 19C4 19.6 4.4 20 5 20H11C11.6 20 12 20.4 12 21C12 21.6 11.6 22 11 22H3C2.4 22 2 21.6 2 21V13C2 12.4 2.4 12 3 12C3.6 12 4 12.4 4 13V19Z"></path></svg>
+    </span>
+</bslib-tooltip><script data-bslib-card-init="">bslib.Card.initializeAllCards();</script></div>
+</div>
+</div>
+</div>
+</div></div><aside id="bslib-sidebar-1" class="sidebar html-fill-container html-fill-item"><div class="html-fill-item html-fill-container">
 <div class="cell-output-display">
 
   <div>
@@ -221,7 +254,7 @@ Attaching package: 'htmltools'</code></pre>
     <div id="checkboxes_div">
       <input type="checkbox" id="select_all" checked="">
       <label for="select_all">Selecionar todos</label>
-       <input type="checkbox" name="checkboxes" value="Gafisa" checked="">Gafisa<input type="checkbox" name="checkboxes" value="PDG Realty" checked="">PDG Realty<input type="checkbox" name="checkboxes" value="CR2" checked="">CR2<input type="checkbox" name="checkboxes" value="Mitre" checked="">Mitre<input type="checkbox" name="checkboxes" value="Tecnisa" checked="">Tecnisa<input type="checkbox" name="checkboxes" value="JHSF" checked="">JHSF<input type="checkbox" name="checkboxes" value="Ez Tec" checked="">Ez Tec<input type="checkbox" name="checkboxes" value="MRV" checked="">MRV<input type="checkbox" name="checkboxes" value="Cury" checked="">Cury<input type="checkbox" name="checkboxes" value="Trisul" checked="">Trisul<input type="checkbox" name="checkboxes" value="Kallas" checked="">Kallas<input type="checkbox" name="checkboxes" value="Yuny" checked="">Yuny<input type="checkbox" name="checkboxes" value="Inter" checked="">Inter<input type="checkbox" name="checkboxes" value="You Inc" checked="">You Inc<input type="checkbox" name="checkboxes" value="Moura Dubex" checked="">Moura Dubex<input type="checkbox" name="checkboxes" value="Melnick" checked="">Melnick<input type="checkbox" name="checkboxes" value="Sugoi" checked="">Sugoi<input type="checkbox" name="checkboxes" value="Direcional" checked="">Direcional<input type="checkbox" name="checkboxes" value="Alphaville" checked="">Alphaville<input type="checkbox" name="checkboxes" value="Emccamp" checked="">Emccamp<input type="checkbox" name="checkboxes" value="Patrimar" checked="">Patrimar<input type="checkbox" name="checkboxes" value="Plano &amp; Plano" checked="">Plano &amp; Plano<input type="checkbox" name="checkboxes" value="Lavvi" checked="">Lavvi<input type="checkbox" name="checkboxes" value="Tegra" checked="">Tegra<input type="checkbox" name="checkboxes" value="João Fortes" checked="">João Fortes<input type="checkbox" name="checkboxes" value="EZ Inc" checked="">EZ Inc<input type="checkbox" name="checkboxes" value="Even" checked="">Even<input type="checkbox" name="checkboxes" value="Helbor" checked="">Helbor<input type="checkbox" name="checkboxes" value="Lindenberg" checked="">Lindenberg<input type="checkbox" name="checkboxes" value="Rossi" checked="">Rossi<input type="checkbox" name="checkboxes" value="RNI" checked="">RNI<input type="checkbox" name="checkboxes" value="Viver" checked="">Viver<input type="checkbox" name="checkboxes" value="Tenda" checked="">Tenda<input type="checkbox" name="checkboxes" value="Cyrela" checked="">Cyrela<input type="checkbox" name="checkboxes" value="Pacaembu" checked="">Pacaembu<input type="checkbox" name="checkboxes" value="Metrocasa" checked="">Metrocasa </div>
+      <br> <input type="checkbox" name="checkboxes" value="Gafisa" checked=""><label>Gafisa</label><br><input type="checkbox" name="checkboxes" value="PDG Realty" checked=""><label>PDG Realty</label><br><input type="checkbox" name="checkboxes" value="CR2" checked=""><label>CR2</label><br><input type="checkbox" name="checkboxes" value="Mitre" checked=""><label>Mitre</label><br><input type="checkbox" name="checkboxes" value="Tecnisa" checked=""><label>Tecnisa</label><br><input type="checkbox" name="checkboxes" value="JHSF" checked=""><label>JHSF</label><br><input type="checkbox" name="checkboxes" value="Ez Tec" checked=""><label>Ez Tec</label><br><input type="checkbox" name="checkboxes" value="MRV" checked=""><label>MRV</label><br><input type="checkbox" name="checkboxes" value="Cury" checked=""><label>Cury</label><br><input type="checkbox" name="checkboxes" value="Trisul" checked=""><label>Trisul</label><br><input type="checkbox" name="checkboxes" value="Kallas" checked=""><label>Kallas</label><br><input type="checkbox" name="checkboxes" value="Yuny" checked=""><label>Yuny</label><br><input type="checkbox" name="checkboxes" value="Inter" checked=""><label>Inter</label><br><input type="checkbox" name="checkboxes" value="You Inc" checked=""><label>You Inc</label><br><input type="checkbox" name="checkboxes" value="Moura Dubex" checked=""><label>Moura Dubex</label><br><input type="checkbox" name="checkboxes" value="Melnick" checked=""><label>Melnick</label><br><input type="checkbox" name="checkboxes" value="Sugoi" checked=""><label>Sugoi</label><br><input type="checkbox" name="checkboxes" value="Direcional" checked=""><label>Direcional</label><br><input type="checkbox" name="checkboxes" value="Alphaville" checked=""><label>Alphaville</label><br><input type="checkbox" name="checkboxes" value="Emccamp" checked=""><label>Emccamp</label><br><input type="checkbox" name="checkboxes" value="Patrimar" checked=""><label>Patrimar</label><br><input type="checkbox" name="checkboxes" value="Plano &amp; Plano" checked=""><label>Plano &amp; Plano</label><br><input type="checkbox" name="checkboxes" value="Lavvi" checked=""><label>Lavvi</label><br><input type="checkbox" name="checkboxes" value="Tegra" checked=""><label>Tegra</label><br><input type="checkbox" name="checkboxes" value="João Fortes" checked=""><label>João Fortes</label><br><input type="checkbox" name="checkboxes" value="EZ Inc" checked=""><label>EZ Inc</label><br><input type="checkbox" name="checkboxes" value="Even" checked=""><label>Even</label><br><input type="checkbox" name="checkboxes" value="Helbor" checked=""><label>Helbor</label><br><input type="checkbox" name="checkboxes" value="Lindenberg" checked=""><label>Lindenberg</label><br><input type="checkbox" name="checkboxes" value="Rossi" checked=""><label>Rossi</label><br><input type="checkbox" name="checkboxes" value="RNI" checked=""><label>RNI</label><br><input type="checkbox" name="checkboxes" value="Viver" checked=""><label>Viver</label><br><input type="checkbox" name="checkboxes" value="Tenda" checked=""><label>Tenda</label><br><input type="checkbox" name="checkboxes" value="Cyrela" checked=""><label>Cyrela</label><br><input type="checkbox" name="checkboxes" value="Pacaembu" checked=""><label>Pacaembu</label><br><input type="checkbox" name="checkboxes" value="Metrocasa" checked=""><label>Metrocasa</label><br> </div>
   </div>
   <script>
     var select_all_checkbox = document.getElementById("select_all");
@@ -230,446 +263,56 @@ Attaching package: 'htmltools'</code></pre>
       for (var i = 0; i < checkboxes.length; i++) {
         checkboxes[i].checked = this.checked;
       }
+      updateTable();
     });
+    checkboxes.forEach(function(checkbox) {
+      checkbox.addEventListener("change", function() {
+        var all_checked = true;
+        checkboxes.forEach(function(cb) {
+          if (!cb.checked) {
+            all_checked = false;
+          }
+        });
+        select_all_checkbox.checked = all_checked;
+        updateTable();
+      });
+    });
+    
+    function updateTable() {
+      var selected_companies = [];
+      checkboxes.forEach(function(checkbox) {
+        if (checkbox.checked) {
+          selected_companies.push(checkbox.value);
+        }
+      });
+      
+      var tbl = document.getElementById("liq_periodo_01");
+      var rows = tbl.getElementsByTagName("tr");
+      for (var i = 1; i < rows.length; i++) {
+        var companyName = rows[i].cells[0].innerHTML;
+        if (selected_companies.includes(companyName)) {
+          rows[i].style.display = "";
+        } else {
+          rows[i].style.display = "none";
+        }
+      }
+    }
   </script>
 </div>
-</div>
-</section>
-<section id="main-body" class="level2">
-<h2 class="anchored" data-anchor-id="main-body">Main Body</h2>
-<section id="first-row" class="level3" height="70%">
-<h3 height="70%" class="anchored" data-anchor-id="first-row">First row</h3>
-<section id="row" class="level4 tabset">
-<h4 class="tabset anchored" data-anchor-id="row">Row</h4>
-<div class="card" title="4T23">
-<div class="cell" title="INDICADORES DE LIQUIDEZ">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>ind_liquidez <span class="ot">&lt;-</span> ind_liquidez <span class="sc">%&gt;%</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rename</span>(</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>      <span class="at">Empresa =</span> EMPRESA,</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>      <span class="st">`</span><span class="at">Liquidez Geral</span><span class="st">`</span> <span class="ot">=</span> liq_geral,</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">`</span><span class="at">Liquidez Corrente</span><span class="st">`</span> <span class="ot">=</span> liq_corrente,</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>      <span class="st">`</span><span class="at">Liquidez Seca</span><span class="st">`</span> <span class="ot">=</span> liq_seca,</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">`</span><span class="at">Liquidez Imediata</span><span class="st">`</span> <span class="ot">=</span> liq_imediata)</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Formatando os números com duas casas decimais e separados por vírgula</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>ind_liquidez<span class="sc">$</span><span class="st">`</span><span class="at">Liquidez Geral</span><span class="st">`</span> <span class="ot">&lt;-</span> <span class="fu">formatC</span>(ind_liquidez<span class="sc">$</span><span class="st">`</span><span class="at">Liquidez Geral</span><span class="st">`</span>, <span class="at">format =</span> <span class="st">"f"</span>, <span class="at">digits =</span> <span class="dv">2</span>, <span class="at">decimal.mark =</span> <span class="st">","</span>, <span class="at">big.mark =</span> <span class="st">"."</span>, <span class="at">width =</span> <span class="cn">NULL</span>)</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>ind_liquidez<span class="sc">$</span><span class="st">`</span><span class="at">Liquidez Corrente</span><span class="st">`</span> <span class="ot">&lt;-</span> <span class="fu">formatC</span>(ind_liquidez<span class="sc">$</span><span class="st">`</span><span class="at">Liquidez Corrente</span><span class="st">`</span>, <span class="at">format =</span> <span class="st">"f"</span>, <span class="at">digits =</span> <span class="dv">2</span>, <span class="at">decimal.mark =</span> <span class="st">","</span>, <span class="at">big.mark =</span> <span class="st">"."</span>, <span class="at">width =</span> <span class="cn">NULL</span>)</span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>ind_liquidez<span class="sc">$</span><span class="st">`</span><span class="at">Liquidez Seca</span><span class="st">`</span> <span class="ot">&lt;-</span> <span class="fu">formatC</span>(ind_liquidez<span class="sc">$</span><span class="st">`</span><span class="at">Liquidez Seca</span><span class="st">`</span>, <span class="at">format =</span> <span class="st">"f"</span>, <span class="at">digits =</span> <span class="dv">2</span>, <span class="at">decimal.mark =</span> <span class="st">","</span>, <span class="at">big.mark =</span> <span class="st">"."</span>, <span class="at">width =</span> <span class="cn">NULL</span>)</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>ind_liquidez<span class="sc">$</span><span class="st">`</span><span class="at">Liquidez Imediata</span><span class="st">`</span> <span class="ot">&lt;-</span> <span class="fu">formatC</span>(ind_liquidez<span class="sc">$</span><span class="st">`</span><span class="at">Liquidez Imediata</span><span class="st">`</span>, <span class="at">format =</span> <span class="st">"f"</span>, <span class="at">digits =</span> <span class="dv">2</span>, <span class="at">decimal.mark =</span> <span class="st">","</span>, <span class="at">big.mark =</span> <span class="st">"."</span>, <span class="at">width =</span> <span class="cn">NULL</span>)</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>liq_periodo_01 <span class="ot">&lt;-</span> ind_liquidez <span class="sc">%&gt;%</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(PERIODO <span class="sc">==</span> <span class="st">"4T23"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>PERIODO)</span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(</span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>  liq_periodo_01, </span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">rownames =</span> F,</span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>  <span class="at">options =</span> <span class="fu">list</span>(</span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">pageLength =</span> <span class="dv">10</span>,</span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">initComplete =</span> <span class="fu">JS</span>(</span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>      <span class="st">"function(settings, json) {"</span>,</span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>      <span class="st">"$(this.api().table().header()).css({</span></span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a><span class="st">      'background-color': '#B52730', </span></span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="st">      'color': '#fff'});"</span>,<span class="st">"}"</span>),</span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="st">'100%'</span>,</span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>     </span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">'center'</span></span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-9a122be5ac72fefe3847" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-9a122be5ac72fefe3847">{"x":{"filter":"none","vertical":false,"data":[["Kallas","Metrocasa"],["1,74","1,30"],["2,97","1,63"],["2,97","1,11"],["0,24","0,27"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
-</div>
-</div>
-</div>
-<div class="card" title="3T23">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>liq_periodo_01 <span class="ot">&lt;-</span> ind_liquidez <span class="sc">%&gt;%</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(PERIODO <span class="sc">==</span> <span class="st">"3T23"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>PERIODO)</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  liq_periodo_01, </span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">rownames =</span> F,</span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">options =</span> <span class="fu">list</span>(</span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">initComplete =</span> <span class="fu">JS</span>(</span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"function(settings, json) {"</span>,</span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"$(this.api().table().header()).css({</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="st">      'background-color': '#B52730', </span></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="st">      'color': '#fff'});"</span>,<span class="st">"}"</span>),</span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="st">'100%'</span>,</span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">'center'</span></span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-3a7409f5dab3edfb6495" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-3a7409f5dab3edfb6495">{"x":{"filter":"none","vertical":false,"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Metrocasa","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,29","0,16","6,22","1,82","1,10","0,90","4,48","1,11","1,44","1,85","1,70","0,75","0,99","1,16","1,49","2,05","1,17","1,35","0,41","2,39","1,34","1,46","2,42","1,36","2,13","0,56","5,17","1,64","1,46","0,41","0,32","1,29","1,03","1,17","1,69","2,10"],["2,03","0,22","0,73","2,65","2,97","2,85","5,19","1,99","2,34","2,82","3,38","1,29","0,83","3,09","2,69","3,08","1,53","3,56","0,28","2,06","1,82","2,96","3,44","1,07","5,85","0,78","5,22","3,51","3,03","1,69","0,22","1,55","1,04","1,31","2,93","2,44"],["0,71","0,06","0,58","1,17","1,42","1,49","2,16","1,13","1,71","1,32","3,38","0,46","0,36","1,10","1,73","3,08","0,92","2,16","0,28","2,06","1,13","2,96","2,08","0,76","2,00","0,12","0,73","1,55","0,97","1,13","0,06","1,07","0,50","0,98","1,88","1,95"],["0,15","0,02","0,35","0,14","0,63","0,48","1,57","0,14","1,12","0,35","0,35","0,08","0,06","0,23","0,60","0,69","0,21","1,42","0,10","0,50","0,49","0,60","1,08","0,36","0,72","0,03","0,48","0,61","0,24","0,48","0,01","0,13","0,18","0,46","0,88","1,10"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
-</div>
-</div>
-</div>
-<div class="card" title="2T23">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>liq_periodo_01 <span class="ot">&lt;-</span> ind_liquidez <span class="sc">%&gt;%</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(PERIODO <span class="sc">==</span> <span class="st">"2T23"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>PERIODO)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(</span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  liq_periodo_01, </span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">rownames =</span> F,</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">options =</span> <span class="fu">list</span>(</span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">initComplete =</span> <span class="fu">JS</span>(</span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"function(settings, json) {"</span>,</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"$(this.api().table().header()).css({</span></span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="st">      'background-color': '#B52730', </span></span>
-<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="st">      'color': '#fff'});"</span>,<span class="st">"}"</span>),</span>
-<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="st">'100%'</span>,</span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">'center'</span></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-f6f21c689ada80c51319" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-f6f21c689ada80c51319">{"x":{"filter":"none","vertical":false,"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Metrocasa","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,30","0,17","6,25","1,92","1,16","0,92","4,82","1,10","1,56","1,86","1,68","0,72","0,93","1,16","1,50","2,14","1,15","1,25","0,46","2,12","1,35","1,36","2,68","1,21","2,25","0,59","5,27","1,69","1,47","0,43","0,34","1,32","1,02","1,12","1,65","2,18"],["2,32","0,24","3,03","2,85","3,54","3,42","5,14","2,06","2,77","2,83","2,66","1,65","1,04","3,51","2,76","3,11","1,08","3,61","0,32","2,33","1,83","3,27","4,33","1,30","4,77","0,85","2,76","2,92","3,62","1,82","0,24","1,71","1,09","1,39","2,65","3,01"],["0,82","0,07","1,83","1,41","1,59","1,89","2,42","1,18","2,00","1,31","2,66","0,51","0,50","1,21","1,78","3,11","0,65","2,10","0,32","2,33","1,18","3,27","2,50","0,98","1,88","0,16","0,54","1,23","1,15","0,91","0,06","1,00","0,62","0,97","1,67","2,30"],["0,20","0,02","1,15","0,30","0,69","0,75","1,72","0,11","1,06","0,40","0,41","0,16","0,09","0,22","0,64","0,65","0,17","1,23","0,12","0,57","0,53","0,65","1,49","0,36","0,76","0,02","0,31","0,51","0,41","0,36","0,01","0,09","0,20","0,46","0,86","1,21"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
-</div>
-</div>
-</div>
-<div class="card" title="1T23">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>liq_periodo_01 <span class="ot">&lt;-</span> ind_liquidez <span class="sc">%&gt;%</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(PERIODO <span class="sc">==</span> <span class="st">"1T23"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>PERIODO)</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  liq_periodo_01, </span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">rownames =</span> F,</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">options =</span> <span class="fu">list</span>(</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">initComplete =</span> <span class="fu">JS</span>(</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"function(settings, json) {"</span>,</span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"$(this.api().table().header()).css({</span></span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="st">      'background-color': '#B52730', </span></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="st">      'color': '#fff'});"</span>,<span class="st">"}"</span>),</span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="st">'100%'</span>,</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">'center'</span></span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-641a3691c1789ab426f9" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-641a3691c1789ab426f9">{"x":{"filter":"none","vertical":false,"data":[["Tenda","Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Metrocasa","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Cyrela","Pacaembu"],["1,12","1,30","0,18","6,45","1,88","1,15","0,91","4,85","1,10","1,47","1,88","1,74","0,71","0,94","1,17","1,51","2,30","1,16","1,24","0,55","2,06","1,40","1,35","2,62","2,07","2,39","0,59","5,31","1,69","1,47","0,58","0,35","1,35","1,07","1,62","2,07"],["1,12","2,10","0,25","5,02","2,75","3,75","3,78","5,48","1,80","2,77","3,71","2,95","1,25","1,14","4,89","2,89","3,86","0,69","3,43","0,52","2,46","2,12","3,06","4,59","3,29","4,35","0,88","1,51","2,73","3,14","1,72","0,25","1,54","1,18","2,65","3,25"],["0,87","0,80","0,08","3,37","1,33","1,58","2,32","2,48","0,98","1,91","1,59","2,95","0,29","0,42","1,73","1,91","1,97","0,43","2,04","0,52","2,46","1,32","3,06","2,36","2,34","1,87","0,18","0,35","1,19","0,88","1,08","0,06","0,94","0,72","1,62","2,43"],["0,38","0,24","0,03","2,42","0,38","0,80","1,00","1,74","0,18","0,95","0,54","0,23","0,06","0,08","0,39","0,68","0,74","0,04","1,23","0,11","0,55","0,59","0,53","1,45","0,71","0,74","0,01","0,19","0,49","0,27","0,40","0,01","0,11","0,25","0,86","1,31"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
-</div>
-</div>
-</div>
-<div class="card" title="4T22">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>liq_periodo_01 <span class="ot">&lt;-</span> ind_liquidez <span class="sc">%&gt;%</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(PERIODO <span class="sc">==</span> <span class="st">"4T22"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>PERIODO)</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  liq_periodo_01, </span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">rownames =</span> F,</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">options =</span> <span class="fu">list</span>(</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">initComplete =</span> <span class="fu">JS</span>(</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"function(settings, json) {"</span>,</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"$(this.api().table().header()).css({</span></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="st">      'background-color': '#B52730', </span></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="st">      'color': '#fff'});"</span>,<span class="st">"}"</span>),</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="st">'100%'</span>,</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">'center'</span></span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-7cac3df4f2ef223986cd" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-7cac3df4f2ef223986cd">{"x":{"filter":"none","vertical":false,"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Metrocasa","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,29","0,19","6,69","1,91","1,10","0,92","4,97","1,08","1,39","1,87","1,77","0,75","0,95","1,18","1,51","2,26","1,17","1,23","0,57","2,01","1,40","1,32","2,79","2,09","2,29","0,57","5,99","1,67","1,45","0,60","0,36","1,36","0,65","1,13","1,58","2,03"],["2,10","0,27","1,69","2,84","3,64","4,21","4,91","2,03","1,93","4,00","3,19","1,30","0,88","3,79","2,78","3,06","1,40","3,02","0,55","2,30","2,75","3,44","4,53","3,42","4,07","0,84","1,61","2,48","3,04","1,65","0,26","1,58","0,51","1,36","2,48","3,74"],["0,76","0,09","1,20","1,27","1,51","2,70","2,37","1,13","1,43","1,78","3,19","0,42","0,36","1,34","1,76","3,06","0,87","1,98","0,55","2,30","1,81","3,44","2,18","2,05","1,95","0,15","0,46","1,00","0,88","0,94","0,07","1,00","0,31","0,93","1,44","2,73"],["0,24","0,03","0,82","0,43","0,85","1,20","1,62","0,14","0,74","0,73","0,43","0,14","0,10","0,32","0,66","0,59","0,21","1,29","0,14","0,40","0,98","0,80","1,28","0,74","0,77","0,01","0,26","0,47","0,34","0,37","0,01","0,15","0,10","0,46","0,77","1,41"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
-</div>
-</div>
-</div>
-<div class="card" title="3T22">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>liq_periodo_01 <span class="ot">&lt;-</span> ind_liquidez <span class="sc">%&gt;%</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(PERIODO <span class="sc">==</span> <span class="st">"3T22"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>PERIODO)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  liq_periodo_01, </span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">rownames =</span> F,</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">options =</span> <span class="fu">list</span>(</span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">initComplete =</span> <span class="fu">JS</span>(</span>
-<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"function(settings, json) {"</span>,</span>
-<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"$(this.api().table().header()).css({</span></span>
-<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="st">      'background-color': '#B52730', </span></span>
-<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a><span class="st">      'color': '#fff'});"</span>,<span class="st">"}"</span>),</span>
-<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="st">'100%'</span>,</span>
-<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">'center'</span></span>
-<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-288ce5ba4c6e39282dae" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-288ce5ba4c6e39282dae">{"x":{"filter":"none","vertical":false,"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,25","0,19","6,78","1,92","1,12","0,95","5,09","1,14","1,39","2,15","1,82","0,81","0,97","1,16","1,50","2,41","1,15","1,26","0,59","2,18","1,43","1,34","3,15","2,17","0,59","6,84","1,73","1,42","0,67","0,47","1,37","0,63","1,17","1,57","2,03"],["1,93","0,29","1,34","2,92","3,12","3,51","5,47","2,10","2,05","3,93","3,92","1,54","1,11","3,34","2,50","2,31","1,41","3,92","0,69","3,75","1,77","4,51","3,65","4,80","0,86","2,28","2,48","2,95","2,44","0,27","1,43","0,51","1,34","2,59","3,28"],["0,76","0,10","1,34","1,40","1,07","2,39","2,81","1,22","1,57","1,38","3,92","0,60","0,53","1,22","1,53","2,31","0,82","2,27","0,69","3,75","1,19","4,51","1,80","2,17","0,17","0,53","0,91","0,85","1,51","0,09","0,90","0,27","1,09","1,59","2,47"],["0,28","0,03","0,97","0,62","0,53","1,01","2,04","0,14","0,64","0,62","0,77","0,14","0,19","0,31","0,55","0,49","0,17","1,41","0,14","0,85","0,63","1,00","1,19","0,95","0,01","0,43","0,39","0,29","0,52","0,01","0,12","0,04","0,52","0,84","1,24"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
-</div>
-</div>
-</div>
-<div class="card" title="2T22">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>liq_periodo_01 <span class="ot">&lt;-</span> ind_liquidez <span class="sc">%&gt;%</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(PERIODO <span class="sc">==</span> <span class="st">"2T22"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>PERIODO)</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  liq_periodo_01, </span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">rownames =</span> F,</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">options =</span> <span class="fu">list</span>(</span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">initComplete =</span> <span class="fu">JS</span>(</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"function(settings, json) {"</span>,</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"$(this.api().table().header()).css({</span></span>
-<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="st">      'background-color': '#B52730', </span></span>
-<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a><span class="st">      'color': '#fff'});"</span>,<span class="st">"}"</span>),</span>
-<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="st">'100%'</span>,</span>
-<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">'center'</span></span>
-<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-1dd3b1f53006c7c07cb4" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-1dd3b1f53006c7c07cb4">{"x":{"filter":"none","vertical":false,"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,35","0,20","6,85","2,19","1,10","0,94","5,31","1,20","1,32","2,18","1,99","0,79","0,95","1,20","1,51","2,53","1,14","1,30","0,63","1,96","1,42","1,32","3,27","2,20","0,60","6,66","1,76","1,49","0,72","0,49","1,38","0,60","1,23","1,60","2,08"],["2,23","0,30","1,58","3,41","3,31","3,24","6,35","2,47","1,55","3,54","4,95","1,60","1,29","3,24","2,53","2,52","1,10","4,64","0,45","4,55","1,61","4,64","3,85","5,66","0,85","1,87","2,21","2,75","3,58","0,29","1,73","0,44","1,55","2,90","3,63"],["0,94","0,10","1,57","1,60","1,08","2,38","3,50","1,46","1,24","1,39","4,95","0,77","0,49","1,28","1,29","2,52","0,91","2,60","0,45","4,55","0,87","4,64","2,00","3,12","0,17","0,61","1,10","0,79","1,37","0,10","0,97","0,21","1,14","1,65","2,74"],["0,35","0,03","1,21","0,60","0,67","1,18","2,58","0,34","0,49","0,73","1,07","0,28","0,25","0,33","0,46","0,59","0,17","1,49","0,07","0,66","0,42","1,10","1,33","1,25","0,02","0,54","0,46","0,31","0,28","0,00","0,15","0,06","0,57","0,86","1,46"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
-</div>
-</div>
-</div>
-<div class="card" title="1T22">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>liq_periodo_01 <span class="ot">&lt;-</span> ind_liquidez <span class="sc">%&gt;%</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(PERIODO <span class="sc">==</span> <span class="st">"1T22"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>PERIODO)</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  liq_periodo_01, </span>
-<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">rownames =</span> F,</span>
-<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">options =</span> <span class="fu">list</span>(</span>
-<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">initComplete =</span> <span class="fu">JS</span>(</span>
-<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"function(settings, json) {"</span>,</span>
-<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"$(this.api().table().header()).css({</span></span>
-<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="st">      'background-color': '#B52730', </span></span>
-<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="st">      'color': '#fff'});"</span>,<span class="st">"}"</span>),</span>
-<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="st">'100%'</span>,</span>
-<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">'center'</span></span>
-<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-ceda2626f82e457c5f08" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-ceda2626f82e457c5f08">{"x":{"filter":"none","vertical":false,"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,40","0,19","6,89","2,57","1,06","0,88","7,65","1,19","1,31","2,18","2,02","0,80","0,93","1,20","1,50","2,62","1,15","1,29","0,67","2,35","1,51","1,30","3,43","2,10","0,61","6,97","1,75","1,49","0,71","0,51","1,42","0,59","1,27","1,64","2,20"],["2,24","0,32","1,87","3,37","3,14","2,57","6,17","2,67","1,49","3,72","4,48","1,72","1,49","3,33","2,19","2,67","1,13","4,88","0,83","6,81","1,61","4,90","3,67","4,97","0,86","2,69","1,90","2,98","1,97","0,31","1,82","0,46","1,91","3,13","4,43"],["0,97","0,10","1,86","1,47","1,03","2,16","3,28","1,49","1,17","1,44","4,48","0,81","0,51","1,39","1,01","2,67","0,75","2,79","0,83","6,81","0,97","4,90","2,03","2,85","0,18","0,58","0,92","0,86","0,59","0,13","0,96","0,24","1,23","1,67","3,46"],["0,43","0,03","1,20","0,53","0,73","0,87","2,31","0,37","0,43","0,71","0,76","0,41","0,19","0,25","0,36","0,59","0,14","1,70","0,11","1,10","0,55","1,11","1,39","1,21","0,02","0,43","0,38","0,39","0,03","0,00","0,10","0,12","0,60","0,85","1,74"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
-</div>
-</div>
-</div>
-<div class="card" title="4T21">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>liq_periodo_01 <span class="ot">&lt;-</span> ind_liquidez <span class="sc">%&gt;%</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(PERIODO <span class="sc">==</span> <span class="st">"4T21"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>PERIODO)</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  liq_periodo_01, </span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">rownames =</span> F,</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">options =</span> <span class="fu">list</span>(</span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">initComplete =</span> <span class="fu">JS</span>(</span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"function(settings, json) {"</span>,</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"$(this.api().table().header()).css({</span></span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="st">      'background-color': '#B52730', </span></span>
-<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a><span class="st">      'color': '#fff'});"</span>,<span class="st">"}"</span>),</span>
-<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="st">'100%'</span>,</span>
-<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">'center'</span></span>
-<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-e425a80e1c1dcbb783a8" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-e425a80e1c1dcbb783a8">{"x":{"filter":"none","vertical":false,"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,42","0,19","7,25","2,64","1,05","0,88","6,49","1,24","1,33","2,10","2,02","0,87","0,91","1,20","1,44","2,57","1,15","1,29","0,71","2,29","1,50","1,32","3,45","2,09","0,63","6,99","1,76","1,52","0,69","0,57","1,42","0,61","1,29","1,65","2,30"],["2,13","0,34","2,11","3,27","3,14","2,42","4,69","2,38","1,68","3,51","5,57","1,66","1,36","3,01","1,85","2,54","1,17","5,75","0,97","5,90","1,69","4,78","3,17","4,47","0,86","3,87","1,88","3,15","1,99","0,27","2,03","0,45","2,20","3,11","6,02"],["0,90","0,11","2,09","1,55","1,01","2,09","2,72","1,29","1,24","1,72","5,57","0,67","0,44","1,17","0,78","2,54","0,84","3,27","0,97","5,90","0,98","4,78","2,08","2,81","0,19","1,50","0,95","1,03","0,80","0,10","1,01","0,27","1,43","1,74","4,65"],["0,45","0,03","1,44","0,68","0,72","1,04","1,91","0,24","0,62","0,87","1,19","0,29","0,18","0,34","0,28","0,60","0,28","2,11","0,18","1,09","0,54","1,22","1,30","1,10","0,02","1,33","0,41","0,44","0,48","0,01","0,12","0,18","0,83","0,98","2,61"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
-</div>
-</div>
-</div>
-<div class="card" title="3T21">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>liq_periodo_01 <span class="ot">&lt;-</span> ind_liquidez <span class="sc">%&gt;%</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(PERIODO <span class="sc">==</span> <span class="st">"3T21"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>PERIODO)</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  liq_periodo_01, </span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">rownames =</span> F,</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">options =</span> <span class="fu">list</span>(</span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">initComplete =</span> <span class="fu">JS</span>(</span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"function(settings, json) {"</span>,</span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"$(this.api().table().header()).css({</span></span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a><span class="st">      'background-color': '#B52730', </span></span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a><span class="st">      'color': '#fff'});"</span>,<span class="st">"}"</span>),</span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="st">'100%'</span>,</span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">'center'</span></span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-051d03d7ad7aa2e60957" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-051d03d7ad7aa2e60957">{"x":{"filter":"none","vertical":false,"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,57","0,20","9,16","2,93","1,07","0,93","7,77","1,27","1,49","2,17","2,09","0,78","0,97","1,26","1,51","2,64","1,12","1,27","0,78","2,33","1,43","1,37","3,84","2,26","0,66","6,11","1,77","1,62","0,61","0,65","1,46","0,77","1,40","1,66","2,39"],["2,44","0,29","2,79","3,33","2,81","2,87","6,45","2,17","2,15","3,50","5,73","1,80","1,37","2,94","1,93","2,69","1,27","4,68","1,13","6,52","1,80","6,40","4,42","4,45","0,88","3,64","2,00","2,76","2,25","0,29","2,08","0,64","2,56","3,41","2,89"],["0,94","0,10","2,76","2,01","1,02","2,14","3,91","1,22","1,70","1,70","5,73","0,90","0,43","1,26","0,87","2,69","0,54","2,64","1,13","6,52","0,87","6,40","3,13","2,75","0,18","0,78","0,90","0,90","0,89","0,20","1,16","0,40","1,77","1,92","2,33"],["0,38","0,04","2,00","1,14","0,73","1,05","3,00","0,27","0,73","0,78","1,32","0,39","0,14","0,43","0,33","0,84","0,15","1,74","0,26","1,74","0,51","1,32","2,17","1,17","0,02","0,50","0,49","0,35","0,36","0,01","0,10","0,26","0,96","1,04","1,49"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
-</div>
-</div>
-</div>
-<div class="card" title="2T21">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>liq_periodo_01 <span class="ot">&lt;-</span> ind_liquidez <span class="sc">%&gt;%</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(PERIODO <span class="sc">==</span> <span class="st">"2T21"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>PERIODO)</span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>  liq_periodo_01, </span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">rownames =</span> F,</span>
-<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">options =</span> <span class="fu">list</span>(</span>
-<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">initComplete =</span> <span class="fu">JS</span>(</span>
-<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">"function(settings, json) {"</span>,</span>
-<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"$(this.api().table().header()).css({</span></span>
-<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="st">      'background-color': '#B52730', </span></span>
-<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a><span class="st">      'color': '#fff'});"</span>,<span class="st">"}"</span>),</span>
-<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="st">'100%'</span>,</span>
-<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">'center'</span></span>
-<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-cf930cf88dfcdfb90c3f" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-cf930cf88dfcdfb90c3f">{"x":{"filter":"none","vertical":false,"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,46","0,21","9,15","3,63","1,11","0,93","8,36","1,27","1,47","2,28","2,32","0,91","0,95","1,30","1,54","2,90","1,14","1,26","0,85","4,00","1,51","1,33","3,97","2,21","0,68","6,17","1,81","1,56","0,60","0,69","1,48","0,64","1,42","1,67","2,43"],["1,75","0,32","2,82","3,67","2,81","3,14","7,38","2,26","1,80","3,20","4,70","2,00","1,37","3,35","2,20","3,08","1,26","5,35","1,17","5,18","2,06","6,95","5,24","3,44","0,90","3,86","2,23","3,09","2,60","0,31","2,09","0,44","2,80","3,43","3,05"],["0,76","0,10","2,81","2,63","0,97","2,63","4,43","1,27","1,46","1,59","4,70","0,93","0,43","1,37","0,92","3,08","0,43","2,87","0,71","5,18","1,22","3,00","4,12","2,15","0,19","1,01","1,11","1,13","1,44","0,22","1,25","0,31","1,61","1,95","2,58"],["0,32","0,04","2,09","1,82","0,63","1,49","3,36","0,28","0,53","0,68","0,52","0,44","0,16","0,46","0,29","1,19","0,08","1,88","0,35","0,81","0,72","1,57","2,96","0,89","0,01","0,76","0,66","0,44","0,45","0,02","0,14","0,20","0,96","1,06","1,85"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
-</div>
-</div>
-</div>
-<div class="card" title="1T21">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>liq_periodo_01 <span class="ot">&lt;-</span> ind_liquidez <span class="sc">%&gt;%</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(PERIODO <span class="sc">==</span> <span class="st">"1T21"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>PERIODO)</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(</span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  liq_periodo_01, </span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">rownames =</span> F,</span>
-<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">editable =</span> T,</span>
-<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">options =</span> <span class="fu">list</span>(</span>
-<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">initComplete =</span> <span class="fu">JS</span>(</span>
-<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"function(settings, json) {"</span>,</span>
-<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>      <span class="st">"$(this.api().table().header()).css({</span></span>
-<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a><span class="st">      'background-color': '#B52730', </span></span>
-<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="st">      'color': '#fff'});"</span>,<span class="st">"}"</span>),</span>
-<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="st">'100%'</span>,</span>
-<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">'center'</span></span>
-<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-b90b51bee684922f9198" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-b90b51bee684922f9198">{"x":{"filter":"none","vertical":false,"editable":{"target":"cell","disable":{"columns":null},"numeric":[],"date":[]},"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,40","0,22","8,66","3,94","1,17","0,85","7,51","1,25","1,53","2,27","2,17","0,94","0,95","1,28","1,58","2,89","1,14","1,31","0,88","2,39","1,58","1,31","4,53","2,30","0,70","5,86","1,84","1,55","0,57","0,66","1,49","0,55","1,46","1,67","2,38"],["1,42","0,36","2,74","4,29","2,14","2,35","6,23","2,16","2,18","3,50","4,32","2,18","1,34","2,21","2,04","3,10","1,31","4,92","1,31","2,55","1,84","5,68","5,04","3,05","0,91","5,15","2,43","3,41","2,20","0,32","1,89","0,30","2,88","2,78","3,70"],["0,72","0,10","2,55","3,51","1,09","2,05","3,81","1,20","1,66","1,93","4,32","1,19","0,47","0,86","0,74","3,10","0,49","2,55","1,31","2,55","0,97","2,73","4,05","1,78","0,20","1,76","1,27","1,11","0,74","0,23","1,19","0,17","1,99","1,61","3,23"],["0,36","0,04","1,91","2,79","0,85","1,36","2,94","0,28","0,59","0,84","0,52","0,35","0,20","0,31","0,25","1,29","0,14","1,75","0,42","0,68","0,48","1,40","3,11","0,83","0,01","1,50","0,79","0,47","0,13","0,03","0,15","0,08","1,04","0,85","2,32"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
-</div>
-</div>
-</div>
-<div class="card" title="4T20">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>liq_periodo_01 <span class="ot">&lt;-</span> ind_liquidez <span class="sc">%&gt;%</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(PERIODO <span class="sc">==</span> <span class="st">"4T20"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>PERIODO)</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(</span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>  liq_periodo_01, </span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">rownames =</span> F,</span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">editable =</span> T,</span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">options =</span> <span class="fu">list</span>(</span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">initComplete =</span> <span class="fu">JS</span>(</span>
-<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"function(settings, json) {"</span>,</span>
-<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>      <span class="st">"$(this.api().table().header()).css({</span></span>
-<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="st">      'background-color': '#B52730', </span></span>
-<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="st">      'color': '#fff'});"</span>,<span class="st">"}"</span>),</span>
-<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="st">'100%'</span>,</span>
-<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">'center'</span></span>
-<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-f383bb521cf504c8853a" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-f383bb521cf504c8853a">{"x":{"filter":"none","vertical":false,"editable":{"target":"cell","disable":{"columns":null},"numeric":[],"date":[]},"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Yuny","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Emccamp","Patrimar","Plano &amp; Plano","Lavvi","Tegra","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,50","0,24","8,63","4,16","1,19","0,81","7,41","1,28","1,60","2,17","2,30","0,94","0,94","1,38","1,62","3,01","1,14","1,31","0,91","2,40","1,65","1,31","4,27","2,18","0,71","5,84","1,91","1,50","0,60","0,67","1,56","0,57","1,49","1,65","2,37"],["1,73","0,38","2,89","5,09","2,35","1,72","5,50","2,37","2,25","3,68","4,25","2,33","1,25","2,91","2,12","3,15","1,47","4,66","1,50","2,53","1,97","5,92","4,77","3,33","0,93","5,70","2,30","3,12","2,56","0,33","1,97","0,32","2,27","2,88","3,97"],["0,89","0,10","2,71","4,38","1,09","1,50","3,56","1,33","1,80","2,21","4,25","1,17","0,48","1,20","0,70","3,15","0,68","2,44","1,50","2,53","0,94","5,92","3,87","2,00","0,20","3,42","1,26","1,09","1,03","0,23","1,33","0,16","1,63","1,59","3,62"],["0,42","0,03","1,91","3,61","0,81","0,97","2,76","0,30","0,72","1,05","0,63","0,26","0,34","0,41","0,14","1,39","0,35","1,62","0,55","0,84","0,38","1,33","3,15","0,95","0,01","3,12","0,78","0,44","0,42","0,03","0,21","0,08","1,07","0,87","2,65"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
-</div>
-</div>
-</div>
-<div class="card" title="3T20">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>liq_periodo_01 <span class="ot">&lt;-</span> ind_liquidez <span class="sc">%&gt;%</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(PERIODO <span class="sc">==</span> <span class="st">"3T20"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>PERIODO)</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(</span>
-<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  liq_periodo_01, </span>
-<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">rownames =</span> F,</span>
-<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">editable =</span> T,</span>
-<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">options =</span> <span class="fu">list</span>(</span>
-<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">initComplete =</span> <span class="fu">JS</span>(</span>
-<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"function(settings, json) {"</span>,</span>
-<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>      <span class="st">"$(this.api().table().header()).css({</span></span>
-<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a><span class="st">      'background-color': '#B52730', </span></span>
-<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="st">      'color': '#fff'});"</span>,<span class="st">"}"</span>),</span>
-<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="st">'100%'</span>,</span>
-<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">'center'</span></span>
-<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-c87dc03a37b214ac696b" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-c87dc03a37b214ac696b">{"x":{"filter":"none","vertical":false,"editable":{"target":"cell","disable":{"columns":null},"numeric":[],"date":[]},"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Patrimar","Plano &amp; Plano","Lavvi","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,63","0,24","10,19","4,24","1,22","0,76","9,39","1,29","1,51","2,49","1,01","1,41","1,60","2,51","1,20","1,34","0,81","1,84","1,28","4,75","0,74","60,91","1,84","1,45","0,66","0,60","1,55","0,64","1,51","1,90","2,24"],["1,84","0,36","4,89","5,12","1,79","2,60","6,75","2,52","1,89","3,48","1,58","2,33","2,33","2,72","1,46","4,44","1,20","1,95","6,26","6,48","0,98","38,88","2,73","3,38","4,44","0,38","1,83","0,43","2,93","3,01","4,72"],["0,92","0,09","4,27","4,31","1,01","2,33","4,68","1,44","1,61","1,93","0,66","1,16","0,83","2,72","0,95","2,78","1,20","1,01","2,90","5,31","0,23","29,58","1,51","1,31","1,86","0,24","1,20","0,13","1,95","1,89","4,15"],["0,44","0,03","3,22","3,56","0,72","1,55","3,80","0,31","0,75","0,80","0,33","0,37","0,12","1,41","0,20","2,00","0,15","0,30","2,02","4,47","0,01","28,02","0,87","0,67","1,31","0,03","0,27","0,06","1,34","1,06","3,04"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
-</div>
-</div>
-</div>
-<div class="card" title="2T20">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>liq_periodo_01 <span class="ot">&lt;-</span> ind_liquidez <span class="sc">%&gt;%</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(PERIODO <span class="sc">==</span> <span class="st">"2T20"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>PERIODO)</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(</span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>  liq_periodo_01, </span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">rownames =</span> F,</span>
-<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">editable =</span> T,</span>
-<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">options =</span> <span class="fu">list</span>(</span>
-<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">initComplete =</span> <span class="fu">JS</span>(</span>
-<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"function(settings, json) {"</span>,</span>
-<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>      <span class="st">"$(this.api().table().header()).css({</span></span>
-<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a><span class="st">      'background-color': '#B52730', </span></span>
-<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a><span class="st">      'color': '#fff'});"</span>,<span class="st">"}"</span>),</span>
-<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">width =</span> <span class="st">'100%'</span>,</span>
-<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">align =</span> <span class="st">'center'</span></span>
-<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-78e6caf9d060e739bc12" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-78e6caf9d060e739bc12">{"x":{"filter":"none","vertical":false,"editable":{"target":"cell","disable":{"columns":null},"numeric":[],"date":[]},"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Patrimar","Plano &amp; Plano","Lavvi","João Fortes","EZ Inc","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,62","0,25","7,63","4,62","1,28","0,60","8,95","1,31","1,38","2,33","2,12","1,01","1,43","1,59","1,73","1,16","1,38","0,84","1,82","1,18","1,76","0,75","46,39","1,66","1,45","0,62","0,63","1,49","0,74","1,46","1,79","2,21"],["1,76","0,36","2,82","6,41","1,78","2,44","6,15","2,53","1,89","3,15","4,12","1,62","2,82","2,21","1,81","1,25","4,24","1,27","2,11","5,68","2,10","1,02","15,15","3,02","3,24","3,11","0,40","1,79","0,44","2,94","2,36","5,25"],["1,03","0,09","2,75","5,94","1,00","2,08","4,41","1,42","1,59","1,89","4,12","0,53","1,53","0,84","1,81","0,59","2,33","1,27","0,92","2,56","0,89","0,24","4,32","1,46","1,09","0,47","0,25","1,20","0,09","2,10","1,28","4,45"],["0,49","0,03","2,28","5,05","0,73","1,29","3,72","0,52","0,68","0,84","0,13","0,22","0,63","0,22","0,47","0,11","1,49","0,12","0,18","1,56","0,18","0,01","2,75","0,66","0,62","0,07","0,02","0,25","0,03","1,46","0,64","3,27"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","width":"100%","align":"center","columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
-</div>
-</div>
-</div>
-<div class="card" title="1T20">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>liq_periodo_01 <span class="ot">&lt;-</span> ind_liquidez <span class="sc">%&gt;%</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(PERIODO <span class="sc">==</span> <span class="st">"1T20"</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span>PERIODO)</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>  liq_periodo_01, </span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">rownames =</span> F,</span>
-<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">editable =</span> T,</span>
-<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">options =</span> <span class="fu">list</span>(</span>
-<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">initComplete =</span> <span class="fu">JS</span>(</span>
-<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">"function(settings, json) {"</span>,</span>
-<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>      <span class="st">"$(this.api().table().header()).css({</span></span>
-<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a><span class="st">      'background-color': '#B52730', </span></span>
-<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a><span class="st">      'color': '#fff'});"</span>,<span class="st">"}"</span>),</span>
-<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">dom =</span> <span class="st">'Bfrtip'</span>,</span>
-<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">buttons =</span> <span class="fu">c</span>(<span class="st">'copy'</span>, <span class="st">'csv'</span>, <span class="st">'excel'</span>, <span class="st">'pdf'</span>, <span class="st">'print'</span>))</span>
-<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-66d8088fe3af090a6260" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-66d8088fe3af090a6260">{"x":{"filter":"none","vertical":false,"editable":{"target":"cell","disable":{"columns":null},"numeric":[],"date":[]},"data":[["Gafisa","PDG Realty","CR2","Mitre","Tecnisa","JHSF","Ez Tec","MRV","Cury","Trisul","Kallas","Inter","You Inc","Moura Dubex","Melnick","Sugoi","Direcional","Alphaville","Patrimar","Plano &amp; Plano","Lavvi","João Fortes","Even","Helbor","Lindenberg","Rossi","RNI","Viver","Tenda","Cyrela","Pacaembu"],["1,44","0,26","4,33","4,25","1,33","0,56","8,66","1,34","1,39","2,42","1,43","1,03","1,47","1,68","1,81","1,14","1,36","0,93","1,78","1,17","1,67","0,77","1,62","1,44","0,63","0,64","1,56","0,76","1,56","1,85","3,48"],["1,70","0,38","2,61","6,39","1,73","2,09","6,18","2,49","1,98","3,18","5,74","2,09","3,37","2,64","1,88","1,15","4,24","1,56","1,99","4,83","1,91","1,04","2,48","3,29","3,39","0,42","2,43","0,44","2,93","2,38","4,32"],["0,94","0,09","2,43","5,90","0,91","1,56","4,41","1,26","1,58","1,86","5,74","1,04","1,85","1,03","1,88","0,35","2,31","1,56","0,87","2,16","0,73","0,25","1,26","1,03","0,33","0,27","1,39","0,07","1,85","1,17","3,22"],["0,35","0,03","1,81","5,16","0,63","1,02","3,57","0,31","0,63","0,90","0,35","0,45","0,68","0,26","0,34","0,06","1,46","0,14","0,32","1,17","0,22","0,01","0,64","0,57","0,07","0,03","0,20","0,01","1,16","0,55","1,95"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Empresa<\/th>\n      <th>Liquidez Geral<\/th>\n      <th>Liquidez Corrente<\/th>\n      <th>Liquidez Seca<\/th>\n      <th>Liquidez Imediata<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({\n      'background-color': '#B52730', \n      'color': '#fff'});\n}","dom":"Bfrtip","buttons":["copy","csv","excel","pdf","print"],"columnDefs":[{"name":"Empresa","targets":0},{"name":"Liquidez Geral","targets":1},{"name":"Liquidez Corrente","targets":2},{"name":"Liquidez Seca","targets":3},{"name":"Liquidez Imediata","targets":4}],"order":[],"autoWidth":false,"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+</div></aside>
+<button class="collapse-toggle" type="button" title="Toggle sidebar" aria-expanded="true" aria-controls="bslib-sidebar-1">
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 16 16" class="bi bi-chevron-left collapse-icon" style="fill:currentColor;" aria-hidden="true" role="img">
+      <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
+    </svg>
+</button>
+<script data-bslib-sidebar-init="">
+bslib.Sidebar.initCollapsibleAll()
+</script>
 </div>
 </div>
 </div>
 
 
-</section>
-</section>
-</section>
-</section>
-
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1216,6 +859,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </footer>
 
+<script type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (_event) {
+  if (window.bslib.Card) {
+    window.bslib.Card.initializeAllCards();
+  }
+}); 
+</script>
+  
 
 
 

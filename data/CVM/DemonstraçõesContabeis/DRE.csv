@@ -125,27 +125,27 @@
 "20605","JHSF","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","2020",638854
 "20605","JHSF","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","2020",643709
 "20605","JHSF","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","2020",-4855
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","2020",936628
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","2020",-533513
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","2020",403115
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","2020",-136982
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","2020",-74449
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","2020",-104675
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","2020",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","2020",10463
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","2020",-8174
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","2020",39853
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","2020",266133
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","2020",168047
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","2020",186396
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","2020",-18349
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","2020",434180
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","2020",-19153
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","2020",415027
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","2020",0
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","2020",415027
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","2020",405212
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","2020",9815
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","2020",936628
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","2020",-533513
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","2020",403115
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","2020",-136982
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","2020",-74449
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","2020",-104675
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","2020",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","2020",10463
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","2020",-8174
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","2020",39853
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","2020",266133
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","2020",168047
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","2020",186396
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","2020",-18349
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","2020",434180
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","2020",-19153
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","2020",415027
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","2020",0
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","2020",415027
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","2020",405212
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","2020",9815
 "20915","MRV","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","2020",6646359
 "20915","MRV","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","2020",-4772021
 "20915","MRV","3.03","3.03 - Resultado Bruto","2020",1874338
@@ -860,27 +860,27 @@
 "20605","JHSF","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","2021",981219
 "20605","JHSF","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","2021",1003464
 "20605","JHSF","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","2021",-22245
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","2021",957866
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","2021",-516063
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","2021",441803
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","2021",-132068
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","2021",-86179
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","2021",-112993
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","2021",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","2021",-2549
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","2021",-6868
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","2021",76521
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","2021",309735
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","2021",168489
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","2021",187581
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","2021",-19092
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","2021",478224
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","2021",-26087
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","2021",452137
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","2021",0
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","2021",452137
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","2021",430128
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","2021",22009
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","2021",957866
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","2021",-516063
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","2021",441803
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","2021",-132068
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","2021",-86179
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","2021",-112993
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","2021",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","2021",-2549
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","2021",-6868
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","2021",76521
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","2021",309735
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","2021",168489
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","2021",187581
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","2021",-19092
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","2021",478224
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","2021",-26087
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","2021",452137
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","2021",0
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","2021",452137
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","2021",430128
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","2021",22009
 "20915","MRV","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","2021",7106201
 "20915","MRV","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","2021",-5277356
 "20915","MRV","3.03","3.03 - Resultado Bruto","2021",1828845
@@ -1595,27 +1595,27 @@
 "20605","JHSF","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","2022",632094
 "20605","JHSF","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","2022",618889
 "20605","JHSF","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","2022",13205
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","2022",1121260
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","2022",-737031
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","2022",384229
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","2022",-144483
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","2022",-97068
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","2022",-134051
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","2022",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","2022",9560
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","2022",-9944
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","2022",87020
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","2022",239746
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","2022",138151
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","2022",175158
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","2022",-37007
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","2022",377897
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","2022",-35790
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","2022",342107
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","2022",0
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","2022",342107
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","2022",324707
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","2022",17400
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","2022",1121260
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","2022",-737031
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","2022",384229
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","2022",-144483
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","2022",-97068
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","2022",-134051
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","2022",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","2022",9560
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","2022",-9944
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","2022",87020
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","2022",239746
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","2022",138151
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","2022",175158
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","2022",-37007
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","2022",377897
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","2022",-35790
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","2022",342107
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","2022",0
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","2022",342107
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","2022",324707
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","2022",17400
 "20915","MRV","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","2022",6645285
 "20915","MRV","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","2022",-5327731
 "20915","MRV","3.03","3.03 - Resultado Bruto","2022",1317554
@@ -2918,111 +2918,111 @@
 "20605","JHSF","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","3T20",179558
 "20605","JHSF","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","9M20",-11076
 "20605","JHSF","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","3T20",-3549
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","1T20",249514
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","1T20",-148311
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","1T20",101203
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","1T20",-53427
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","1T20",-26808
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","1T20",-26730
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","1T20",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","1T20",0
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","1T20",-7986
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","1T20",8097
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","1T20",47776
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","1T20",36835
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","1T20",39203
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","1T20",-2368
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","1T20",84611
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","1T20",-5229
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","1T20",79382
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","1T20",0
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","1T20",79382
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","1T20",77689
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","1T20",1693
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","6M20",402800
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","2T20",153286
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","6M20",-223052
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","2T20",-74741
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","6M20",179748
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","2T20",78545
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","6M20",-80973
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","2T20",-27546
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","6M20",-37526
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","2T20",-10718
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","6M20",-48066
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","2T20",-21336
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","6M20",0
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","2T20",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","6M20",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","2T20",0
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","6M20",-9554
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","2T20",-1568
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","6M20",14173
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","2T20",6076
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","6M20",98775
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","2T20",50999
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","6M20",57924
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","2T20",21089
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","6M20",62442
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","2T20",23239
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","6M20",-4518
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","2T20",-2150
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","6M20",156699
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","2T20",72088
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","6M20",-7432
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","2T20",-2203
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","6M20",149267
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","2T20",69885
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","6M20",0
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","2T20",0
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","6M20",149267
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","2T20",69885
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","6M20",145761
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","2T20",68072
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","6M20",3506
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","2T20",1813
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","9M20",674409
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","3T20",271609
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","9M20",-376148
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","3T20",-153096
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","9M20",298261
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","3T20",118513
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","9M20",-105850
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","3T20",-24877
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","9M20",-58306
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","3T20",-20780
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","9M20",-74253
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","3T20",-26187
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","9M20",0
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","3T20",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","9M20",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","3T20",0
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","9M20",-8031
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","3T20",1523
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","9M20",34740
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","3T20",20567
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","9M20",192411
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","3T20",93636
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","9M20",91847
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","3T20",33923
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","9M20",102061
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","3T20",39619
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","9M20",-10214
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","3T20",-5696
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","9M20",284258
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","3T20",127559
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","9M20",-12995
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","3T20",-5563
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","9M20",271263
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","3T20",121996
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","9M20",0
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","3T20",0
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","9M20",271263
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","3T20",121996
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","9M20",265561
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","3T20",119800
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","9M20",5702
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","3T20",2196
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","1T20",249514
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","1T20",-148311
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","1T20",101203
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","1T20",-53427
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","1T20",-26808
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","1T20",-26730
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","1T20",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","1T20",0
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","1T20",-7986
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","1T20",8097
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","1T20",47776
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","1T20",36835
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","1T20",39203
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","1T20",-2368
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","1T20",84611
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","1T20",-5229
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","1T20",79382
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","1T20",0
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","1T20",79382
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","1T20",77689
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","1T20",1693
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","6M20",402800
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","2T20",153286
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","6M20",-223052
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","2T20",-74741
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","6M20",179748
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","2T20",78545
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","6M20",-80973
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","2T20",-27546
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","6M20",-37526
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","2T20",-10718
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","6M20",-48066
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","2T20",-21336
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","6M20",0
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","2T20",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","6M20",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","2T20",0
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","6M20",-9554
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","2T20",-1568
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","6M20",14173
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","2T20",6076
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","6M20",98775
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","2T20",50999
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","6M20",57924
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","2T20",21089
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","6M20",62442
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","2T20",23239
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","6M20",-4518
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","2T20",-2150
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","6M20",156699
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","2T20",72088
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","6M20",-7432
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","2T20",-2203
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","6M20",149267
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","2T20",69885
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","6M20",0
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","2T20",0
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","6M20",149267
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","2T20",69885
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","6M20",145761
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","2T20",68072
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","6M20",3506
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","2T20",1813
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","9M20",674409
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","3T20",271609
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","9M20",-376148
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","3T20",-153096
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","9M20",298261
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","3T20",118513
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","9M20",-105850
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","3T20",-24877
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","9M20",-58306
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","3T20",-20780
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","9M20",-74253
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","3T20",-26187
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","9M20",0
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","3T20",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","9M20",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","3T20",0
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","9M20",-8031
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","3T20",1523
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","9M20",34740
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","3T20",20567
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","9M20",192411
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","3T20",93636
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","9M20",91847
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","3T20",33923
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","9M20",102061
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","3T20",39619
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","9M20",-10214
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","3T20",-5696
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","9M20",284258
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","3T20",127559
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","9M20",-12995
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","3T20",-5563
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","9M20",271263
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","3T20",121996
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","9M20",0
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","3T20",0
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","9M20",271263
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","3T20",121996
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","9M20",265561
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","3T20",119800
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","9M20",5702
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","3T20",2196
 "20915","MRV","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","1T20",1508468
 "20915","MRV","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","1T20",-1084471
 "20915","MRV","3.03","3.03 - Resultado Bruto","1T20",423997
@@ -6215,111 +6215,111 @@
 "20605","JHSF","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","3T21",213974
 "20605","JHSF","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","9M21",-9892
 "20605","JHSF","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","3T21",-218
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","1T21",194969
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","1T21",-112177
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","1T21",82792
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","1T21",-46148
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","1T21",-19344
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","1T21",-25040
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","1T21",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","1T21",0
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","1T21",-7486
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","1T21",5722
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","1T21",36644
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","1T21",44630
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","1T21",52315
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","1T21",-7685
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","1T21",81274
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","1T21",-5069
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","1T21",76205
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","1T21",0
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","1T21",76205
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","1T21",72910
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","1T21",3295
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","6M21",483716
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","2T21",288747
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","6M21",-269377
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","2T21",-157200
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","6M21",214339
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","2T21",131547
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","6M21",-71500
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","2T21",-25352
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","6M21",-43831
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","2T21",-24487
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","6M21",-53355
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","2T21",-28315
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","6M21",0
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","2T21",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","6M21",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","2T21",0
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","6M21",-6309
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","2T21",1177
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","6M21",31995
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","2T21",26273
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","6M21",142839
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","2T21",106195
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","6M21",90997
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","2T21",46367
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","6M21",104465
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","2T21",52150
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","6M21",-13468
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","2T21",-5783
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","6M21",233836
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","2T21",152562
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","6M21",-11823
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","2T21",-6754
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","6M21",222013
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","2T21",145808
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","6M21",0
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","2T21",0
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","6M21",222013
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","2T21",145808
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","6M21",212400
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","2T21",139490
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","6M21",9613
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","2T21",6318
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","9M21",781468
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","3T21",297752
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","9M21",-416835
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","3T21",-147458
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","9M21",364633
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","3T21",150294
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","9M21",-105245
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","3T21",-33745
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","9M21",-66088
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","3T21",-22257
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","9M21",-82631
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","3T21",-29276
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","9M21",0
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","3T21",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","9M21",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","3T21",0
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","9M21",-9698
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","3T21",-3389
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","9M21",53172
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","3T21",21177
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","9M21",259388
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","3T21",116549
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","9M21",134380
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","3T21",43383
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","9M21",151543
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","3T21",47078
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","9M21",-17163
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","3T21",-3695
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","9M21",393768
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","3T21",159932
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","9M21",-19532
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","3T21",-7709
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","9M21",374236
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","3T21",152223
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","9M21",0
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","3T21",0
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","9M21",374236
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","3T21",152223
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","9M21",357647
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","3T21",145247
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","9M21",16589
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","3T21",6976
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","1T21",194969
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","1T21",-112177
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","1T21",82792
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","1T21",-46148
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","1T21",-19344
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","1T21",-25040
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","1T21",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","1T21",0
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","1T21",-7486
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","1T21",5722
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","1T21",36644
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","1T21",44630
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","1T21",52315
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","1T21",-7685
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","1T21",81274
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","1T21",-5069
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","1T21",76205
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","1T21",0
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","1T21",76205
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","1T21",72910
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","1T21",3295
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","6M21",483716
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","2T21",288747
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","6M21",-269377
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","2T21",-157200
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","6M21",214339
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","2T21",131547
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","6M21",-71500
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","2T21",-25352
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","6M21",-43831
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","2T21",-24487
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","6M21",-53355
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","2T21",-28315
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","6M21",0
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","2T21",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","6M21",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","2T21",0
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","6M21",-6309
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","2T21",1177
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","6M21",31995
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","2T21",26273
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","6M21",142839
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","2T21",106195
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","6M21",90997
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","2T21",46367
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","6M21",104465
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","2T21",52150
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","6M21",-13468
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","2T21",-5783
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","6M21",233836
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","2T21",152562
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","6M21",-11823
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","2T21",-6754
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","6M21",222013
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","2T21",145808
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","6M21",0
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","2T21",0
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","6M21",222013
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","2T21",145808
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","6M21",212400
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","2T21",139490
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","6M21",9613
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","2T21",6318
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","9M21",781468
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","3T21",297752
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","9M21",-416835
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","3T21",-147458
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","9M21",364633
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","3T21",150294
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","9M21",-105245
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","3T21",-33745
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","9M21",-66088
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","3T21",-22257
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","9M21",-82631
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","3T21",-29276
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","9M21",0
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","3T21",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","9M21",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","3T21",0
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","9M21",-9698
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","3T21",-3389
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","9M21",53172
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","3T21",21177
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","9M21",259388
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","3T21",116549
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","9M21",134380
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","3T21",43383
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","9M21",151543
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","3T21",47078
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","9M21",-17163
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","3T21",-3695
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","9M21",393768
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","3T21",159932
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","9M21",-19532
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","3T21",-7709
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","9M21",374236
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","3T21",152223
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","9M21",0
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","3T21",0
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","9M21",374236
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","3T21",152223
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","9M21",357647
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","3T21",145247
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","9M21",16589
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","3T21",6976
 "20915","MRV","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","1T21",1597936
 "20915","MRV","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","1T21",-1153155
 "20915","MRV","3.03","3.03 - Resultado Bruto","1T21",444781
@@ -9888,111 +9888,111 @@
 "20605","JHSF","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","3T22",147164
 "20605","JHSF","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","9M22",7741
 "20605","JHSF","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","3T22",12536
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","1T22",287160
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","1T22",-174297
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","1T22",112863
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","1T22",-35865
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","1T22",-21658
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","1T22",-29451
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","1T22",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","1T22",0
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","1T22",-5689
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","1T22",20933
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","1T22",76998
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","1T22",41402
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","1T22",44113
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","1T22",-2711
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","1T22",118400
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","1T22",-8133
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","1T22",110267
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","1T22",0
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","1T22",110267
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","1T22",104649
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","1T22",5618
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","6M22",529717
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","2T22",242557
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","6M22",-332755
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","2T22",-158458
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","6M22",196962
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","2T22",84099
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","6M22",-71229
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","2T22",-35364
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","6M22",-44746
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","2T22",-23088
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","6M22",-64417
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","2T22",-34966
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","6M22",0
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","2T22",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","6M22",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","2T22",0
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","6M22",-7140
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","2T22",-1451
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","6M22",45074
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","2T22",24141
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","6M22",125733
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","2T22",48735
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","6M22",89565
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","2T22",48163
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","6M22",100221
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","2T22",56108
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","6M22",-10656
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","2T22",-7945
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","6M22",215298
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","2T22",96898
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","6M22",-16274
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","2T22",-8141
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","6M22",199024
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","2T22",88757
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","6M22",0
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","2T22",0
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","6M22",199024
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","2T22",88757
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","6M22",187770
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","2T22",83121
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","6M22",11254
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","2T22",5636
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","9M22",810363
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","3T22",280646
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","9M22",-503124
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","3T22",-170369
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","9M22",307239
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","3T22",110277
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","9M22",-92726
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","3T22",-21496
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","9M22",-67153
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","3T22",-22407
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","9M22",-97566
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","3T22",-33149
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","9M22",0
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","3T22",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","9M22",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","3T22",0
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","9M22",-5736
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","3T22",1405
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","9M22",77729
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","3T22",32655
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","9M22",214513
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","3T22",88781
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","9M22",119250
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","3T22",29685
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","9M22",143200
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","3T22",42979
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","9M22",-23950
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","3T22",-13294
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","9M22",333763
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","3T22",118466
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","9M22",-25690
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","3T22",-9416
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","9M22",308073
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","3T22",109050
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","9M22",0
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","3T22",0
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","9M22",308073
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","3T22",109050
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","9M22",293196
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","3T22",105427
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","9M22",14877
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","3T22",3623
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","1T22",287160
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","1T22",-174297
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","1T22",112863
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","1T22",-35865
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","1T22",-21658
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","1T22",-29451
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","1T22",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","1T22",0
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","1T22",-5689
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","1T22",20933
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","1T22",76998
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","1T22",41402
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","1T22",44113
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","1T22",-2711
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","1T22",118400
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","1T22",-8133
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","1T22",110267
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","1T22",0
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","1T22",110267
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","1T22",104649
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","1T22",5618
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","6M22",529717
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","2T22",242557
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","6M22",-332755
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","2T22",-158458
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","6M22",196962
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","2T22",84099
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","6M22",-71229
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","2T22",-35364
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","6M22",-44746
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","2T22",-23088
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","6M22",-64417
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","2T22",-34966
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","6M22",0
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","2T22",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","6M22",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","2T22",0
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","6M22",-7140
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","2T22",-1451
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","6M22",45074
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","2T22",24141
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","6M22",125733
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","2T22",48735
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","6M22",89565
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","2T22",48163
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","6M22",100221
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","2T22",56108
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","6M22",-10656
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","2T22",-7945
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","6M22",215298
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","2T22",96898
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","6M22",-16274
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","2T22",-8141
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","6M22",199024
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","2T22",88757
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","6M22",0
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","2T22",0
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","6M22",199024
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","2T22",88757
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","6M22",187770
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","2T22",83121
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","6M22",11254
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","2T22",5636
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","9M22",810363
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","3T22",280646
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","9M22",-503124
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","3T22",-170369
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","9M22",307239
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","3T22",110277
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","9M22",-92726
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","3T22",-21496
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","9M22",-67153
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","3T22",-22407
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","9M22",-97566
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","3T22",-33149
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","9M22",0
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","3T22",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","9M22",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","3T22",0
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","9M22",-5736
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","3T22",1405
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","9M22",77729
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","3T22",32655
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","9M22",214513
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","3T22",88781
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","9M22",119250
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","3T22",29685
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","9M22",143200
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","3T22",42979
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","9M22",-23950
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","3T22",-13294
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","9M22",333763
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","3T22",118466
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","9M22",-25690
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","3T22",-9416
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","9M22",308073
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","3T22",109050
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","9M22",0
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","3T22",0
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","9M22",308073
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","3T22",109050
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","9M22",293196
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","3T22",105427
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","9M22",14877
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","3T22",3623
 "20915","MRV","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","1T22",1675101
 "20915","MRV","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","1T22",-1343425
 "20915","MRV","3.03","3.03 - Resultado Bruto","1T22",331676
@@ -13563,111 +13563,111 @@
 "20605","JHSF","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","3T23",79193
 "20605","JHSF","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","9M23",-4238
 "20605","JHSF","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","3T23",104
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","1T23",250784
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","1T23",-179499
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","1T23",71285
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","1T23",-42095
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","1T23",-24931
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","1T23",-31235
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","1T23",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","1T23",0
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","1T23",-3262
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","1T23",17333
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","1T23",29190
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","1T23",24322
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","1T23",36663
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","1T23",-12341
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","1T23",53512
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","1T23",-7482
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","1T23",46030
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","1T23",0
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","1T23",46030
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","1T23",42225
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","1T23",3805
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","6M23",493516
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","2T23",242732
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","6M23",-343650
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","2T23",-164151
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","6M23",149866
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","2T23",78581
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","6M23",-62475
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","2T23",-20380
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","6M23",-54799
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","2T23",-29868
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","6M23",-66912
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","2T23",-35677
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","6M23",0
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","2T23",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","6M23",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","2T23",0
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","6M23",-8089
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","2T23",-4827
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","6M23",67325
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","2T23",49992
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","6M23",87391
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","2T23",58201
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","6M23",47418
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","2T23",23096
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","6M23",72046
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","2T23",35383
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","6M23",-24628
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","2T23",-12287
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","6M23",134809
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","2T23",81297
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","6M23",-13267
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","2T23",-5785
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","6M23",121542
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","2T23",75512
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","6M23",0
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","2T23",0
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","6M23",121542
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","2T23",75512
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","6M23",117558
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","2T23",75333
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","6M23",3984
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","2T23",179
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","9M23",745243
-"20770","Ez Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","3T23",251727
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","9M23",-514052
-"20770","Ez Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","3T23",-170402
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","9M23",231191
-"20770","Ez Tec","3.03","3.03 - Resultado Bruto","3T23",81325
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","9M23",-112614
-"20770","Ez Tec","3.04","3.04 - Despesas/Receitas Operacionais","3T23",-50139
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","9M23",-83363
-"20770","Ez Tec","3.04.01","3.04.01 - Despesas com Vendas","3T23",-28564
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","9M23",-101920
-"20770","Ez Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","3T23",-35008
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","9M23",0
-"20770","Ez Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","3T23",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","9M23",0
-"20770","Ez Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","3T23",0
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","9M23",-8909
-"20770","Ez Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","3T23",-820
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","9M23",81578
-"20770","Ez Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","3T23",14253
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","9M23",118577
-"20770","Ez Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","3T23",31186
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","9M23",61142
-"20770","Ez Tec","3.06","3.06 - Resultado Financeiro","3T23",13724
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","9M23",100120
-"20770","Ez Tec","3.06.01","3.06.01 - Receitas Financeiras","3T23",28074
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","9M23",-38978
-"20770","Ez Tec","3.06.02","3.06.02 - Despesas Financeiras","3T23",-14350
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","9M23",179719
-"20770","Ez Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","3T23",44910
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","9M23",-19702
-"20770","Ez Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","3T23",-6435
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","9M23",160017
-"20770","Ez Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","3T23",38475
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","9M23",0
-"20770","Ez Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","3T23",0
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","9M23",160017
-"20770","Ez Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","3T23",38475
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","9M23",156669
-"20770","Ez Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","3T23",39111
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","9M23",3348
-"20770","Ez Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","3T23",-636
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","1T23",250784
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","1T23",-179499
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","1T23",71285
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","1T23",-42095
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","1T23",-24931
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","1T23",-31235
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","1T23",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","1T23",0
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","1T23",-3262
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","1T23",17333
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","1T23",29190
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","1T23",24322
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","1T23",36663
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","1T23",-12341
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","1T23",53512
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","1T23",-7482
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","1T23",46030
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","1T23",0
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","1T23",46030
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","1T23",42225
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","1T23",3805
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","6M23",493516
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","2T23",242732
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","6M23",-343650
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","2T23",-164151
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","6M23",149866
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","2T23",78581
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","6M23",-62475
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","2T23",-20380
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","6M23",-54799
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","2T23",-29868
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","6M23",-66912
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","2T23",-35677
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","6M23",0
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","2T23",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","6M23",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","2T23",0
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","6M23",-8089
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","2T23",-4827
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","6M23",67325
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","2T23",49992
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","6M23",87391
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","2T23",58201
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","6M23",47418
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","2T23",23096
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","6M23",72046
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","2T23",35383
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","6M23",-24628
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","2T23",-12287
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","6M23",134809
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","2T23",81297
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","6M23",-13267
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","2T23",-5785
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","6M23",121542
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","2T23",75512
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","6M23",0
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","2T23",0
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","6M23",121542
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","2T23",75512
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","6M23",117558
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","2T23",75333
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","6M23",3984
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","2T23",179
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","9M23",745243
+"20770","EZ Tec","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","3T23",251727
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","9M23",-514052
+"20770","EZ Tec","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","3T23",-170402
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","9M23",231191
+"20770","EZ Tec","3.03","3.03 - Resultado Bruto","3T23",81325
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","9M23",-112614
+"20770","EZ Tec","3.04","3.04 - Despesas/Receitas Operacionais","3T23",-50139
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","9M23",-83363
+"20770","EZ Tec","3.04.01","3.04.01 - Despesas com Vendas","3T23",-28564
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","9M23",-101920
+"20770","EZ Tec","3.04.02","3.04.02 - Despesas Gerais e Administrativas","3T23",-35008
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","9M23",0
+"20770","EZ Tec","3.04.03","3.04.03 - Perdas pela Não Recuperabilidade de Ativos","3T23",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","9M23",0
+"20770","EZ Tec","3.04.04","3.04.04 - Outras Receitas Operacionais","3T23",0
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","9M23",-8909
+"20770","EZ Tec","3.04.05","3.04.05 - Outras Despesas Operacionais","3T23",-820
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","9M23",81578
+"20770","EZ Tec","3.04.06","3.04.06 - Resultado de Equivalência Patrimonial","3T23",14253
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","9M23",118577
+"20770","EZ Tec","3.05","3.05 - Resultado Antes do Resultado Financeiro e dos Tributos","3T23",31186
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","9M23",61142
+"20770","EZ Tec","3.06","3.06 - Resultado Financeiro","3T23",13724
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","9M23",100120
+"20770","EZ Tec","3.06.01","3.06.01 - Receitas Financeiras","3T23",28074
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","9M23",-38978
+"20770","EZ Tec","3.06.02","3.06.02 - Despesas Financeiras","3T23",-14350
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","9M23",179719
+"20770","EZ Tec","3.07","3.07 - Resultado Antes dos Tributos sobre o Lucro","3T23",44910
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","9M23",-19702
+"20770","EZ Tec","3.08","3.08 - Imposto de Renda e Contribuição Social sobre o Lucro","3T23",-6435
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","9M23",160017
+"20770","EZ Tec","3.09","3.09 - Resultado Líquido das Operações Continuadas","3T23",38475
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","9M23",0
+"20770","EZ Tec","3.10","3.10 - Resultado Líquido de Operações Descontinuadas","3T23",0
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","9M23",160017
+"20770","EZ Tec","3.11","3.11 - Lucro/Prejuízo Consolidado do Período","3T23",38475
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","9M23",156669
+"20770","EZ Tec","3.11.01","3.11.01 - Atribuído a Sócios da Empresa Controladora","3T23",39111
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","9M23",3348
+"20770","EZ Tec","3.11.02","3.11.02 - Atribuído a Sócios Não Controladores","3T23",-636
 "20915","MRV","3.01","3.01 - Receita de Venda de Bens e/ou Serviços","1T23",1689885
 "20915","MRV","3.02","3.02 - Custo dos Bens e/ou Serviços Vendidos","1T23",-1336432
 "20915","MRV","3.03","3.03 - Resultado Bruto","1T23",353453
