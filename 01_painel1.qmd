@@ -2,7 +2,7 @@
 
 ```{r}
 #| include: false
-source("./data/CVM/R/06_Indicadores.R")
+source("./data/CVM/R/07_Indicadores.R")
 
 p <- ggplot() + geom_blank() + theme_dark()
 ```
@@ -19,8 +19,6 @@ library(purrr)
 library(ggiraph)
 library(htmltools)
 library(reactable)
-color_palette <- c("#E69F00", "#009E73", "#0072B2")
-names(color_palette) <- unique(palmerpenguins::penguins$species)
 ```
 
 
@@ -33,7 +31,7 @@ HTML('
       <label for="select_all">Selecionar todos</label>
       <br>', 
       paste0(
-        lapply(struct_empresas$EMPRESA, function(x) {
+        lapply(unique(ind_liquidez$EMPRESA), function(x) {
           paste0(
             '<input type="checkbox" name="checkboxes" value="', x, '" checked>',
             '<label>', x, '</label>',
@@ -54,13 +52,6 @@ HTML('
     });
     checkboxes.forEach(function(checkbox) {
       checkbox.addEventListener("change", function() {
-        var all_checked = true;
-        checkboxes.forEach(function(cb) {
-          if (!cb.checked) {
-            all_checked = false;
-          }
-        });
-        select_all_checkbox.checked = all_checked;
         updateTable();
       });
     });
@@ -73,7 +64,7 @@ HTML('
         }
       });
       
-      var tbl = document.getElementById("liq_periodo_01");
+      var tbl = document.getElementById("ind_liquidez");
       var rows = tbl.getElementsByTagName("tr");
       for (var i = 1; i < rows.length; i++) {
         var companyName = rows[i].cells[0].innerHTML;
@@ -88,6 +79,9 @@ HTML('
 )
 
 
+
+
+
 ```
 
 ## Main Body
@@ -97,32 +91,25 @@ HTML('
 #### Row {.tabset}
 
 
-::: {.card title="4T23"}
+
 ```{r}
 #| title: INDICADORES DE LIQUIDEZ
 
-ind_liquidez <- ind_liquidez %>%
-    rename(
-      Empresa = EMPRESA,
-      `Liquidez Geral` = liq_geral,
-      `Liquidez Corrente` = liq_corrente,
-      `Liquidez Seca` = liq_seca,
-      `Liquidez Imediata` = liq_imediata)
-
 # Formatando os números com duas casas decimais e separados por vírgula
-ind_liquidez$`Liquidez Geral` <- formatC(ind_liquidez$`Liquidez Geral`, format = "f", digits = 2, decimal.mark = ",", big.mark = ".", width = NULL)
-ind_liquidez$`Liquidez Corrente` <- formatC(ind_liquidez$`Liquidez Corrente`, format = "f", digits = 2, decimal.mark = ",", big.mark = ".", width = NULL)
-ind_liquidez$`Liquidez Seca` <- formatC(ind_liquidez$`Liquidez Seca`, format = "f", digits = 2, decimal.mark = ",", big.mark = ".", width = NULL)
-ind_liquidez$`Liquidez Imediata` <- formatC(ind_liquidez$`Liquidez Imediata`, format = "f", digits = 2, decimal.mark = ",", big.mark = ".", width = NULL)
+ind_liquidez$liq_geral <- formatC(ind_liquidez$liq_geral, format = "f", digits = 2, decimal.mark = ",", big.mark = ".", width = NULL)
+ind_liquidez$liq_corrente <- formatC(ind_liquidez$liq_corrente, format = "f", digits = 2, decimal.mark = ",", big.mark = ".", width = NULL)
+ind_liquidez$liq_seca <- formatC(ind_liquidez$liq_seca, format = "f", digits = 2, decimal.mark = ",", big.mark = ".", width = NULL)
+ind_liquidez$liq_imediata <- formatC(ind_liquidez$liq_imediata, format = "f", digits = 2, decimal.mark = ",", big.mark = ".", width = NULL)
 
-liq_periodo_01 <- ind_liquidez %>%
-  filter(PERIODO == "4T23") %>%
-  select(-PERIODO)
-
-  
 DT::datatable(
-  liq_periodo_01, 
+  ind_liquidez, 
+  extensions = 'FixedHeader',
   rownames = F,
+  colnames = c('Empresa' = 'EMPRESA',
+               'Liquidez Geral' = "liq_geral", 
+               'Liquidez Corrente' = "liq_corrente",
+               'Liquidez Seca' = "liq_seca",
+               'Liquidez Imediata' = "liq_imediata"),
   options = list(
     pageLength = 10,
     initComplete = JS(
@@ -133,345 +120,10 @@ DT::datatable(
     width = '100%',
     align = 'center'
     ),
-  elementId = "liq_periodo_01"
+  elementId = "ind_liquidez"
 )
 
+
+
 ```
-:::
-
-::: {.card title="3T23"}
-```{r}
-liq_periodo_01 <- ind_liquidez %>%
-  filter(PERIODO == "3T23") %>%
-  select(-PERIODO)
-
-  
-DT::datatable(
-  liq_periodo_01, 
-  rownames = F,
-  options = list(
-    initComplete = JS(
-      "function(settings, json) {",
-      "$(this.api().table().header()).css({
-      'background-color': '#B52730', 
-      'color': '#fff'});","}"),
-    width = '100%',
-    align = 'center'
-    ))
-```
-:::
-
-::: {.card title="2T23"}
-```{r}
-liq_periodo_01 <- ind_liquidez %>%
-  filter(PERIODO == "2T23") %>%
-  select(-PERIODO)
-
-  
-DT::datatable(
-  liq_periodo_01, 
-  rownames = F,
-  options = list(
-    initComplete = JS(
-      "function(settings, json) {",
-      "$(this.api().table().header()).css({
-      'background-color': '#B52730', 
-      'color': '#fff'});","}"),
-    width = '100%',
-    align = 'center'
-    ))
-```
-:::
-
-::: {.card title="1T23"}
-```{r}
-liq_periodo_01 <- ind_liquidez %>%
-  filter(PERIODO == "1T23") %>%
-  select(-PERIODO)
-
-  
-DT::datatable(
-  liq_periodo_01, 
-  rownames = F,
-  options = list(
-    initComplete = JS(
-      "function(settings, json) {",
-      "$(this.api().table().header()).css({
-      'background-color': '#B52730', 
-      'color': '#fff'});","}"),
-    width = '100%',
-    align = 'center'
-    ))
-```
-:::
-
-::: {.card title="4T22"}
-```{r}
-liq_periodo_01 <- ind_liquidez %>%
-  filter(PERIODO == "4T22") %>%
-  select(-PERIODO)
-
-  
-DT::datatable(
-  liq_periodo_01, 
-  rownames = F,
-  options = list(
-    initComplete = JS(
-      "function(settings, json) {",
-      "$(this.api().table().header()).css({
-      'background-color': '#B52730', 
-      'color': '#fff'});","}"),
-    width = '100%',
-    align = 'center'
-    ))
-```
-:::
-
-::: {.card title="3T22"}
-```{r}
-liq_periodo_01 <- ind_liquidez %>%
-  filter(PERIODO == "3T22") %>%
-  select(-PERIODO)
-
-  
-DT::datatable(
-  liq_periodo_01, 
-  rownames = F,
-  options = list(
-    initComplete = JS(
-      "function(settings, json) {",
-      "$(this.api().table().header()).css({
-      'background-color': '#B52730', 
-      'color': '#fff'});","}"),
-    width = '100%',
-    align = 'center'
-    ))
-```
-:::
-
-::: {.card title="2T22"}
-```{r}
-liq_periodo_01 <- ind_liquidez %>%
-  filter(PERIODO == "2T22") %>%
-  select(-PERIODO)
-
-  
-DT::datatable(
-  liq_periodo_01, 
-  rownames = F,
-  options = list(
-    initComplete = JS(
-      "function(settings, json) {",
-      "$(this.api().table().header()).css({
-      'background-color': '#B52730', 
-      'color': '#fff'});","}"),
-    width = '100%',
-    align = 'center'
-    ))
-```
-:::
-
-::: {.card title="1T22"}
-```{r}
-liq_periodo_01 <- ind_liquidez %>%
-  filter(PERIODO == "1T22") %>%
-  select(-PERIODO)
-
-  
-DT::datatable(
-  liq_periodo_01, 
-  rownames = F,
-  options = list(
-    initComplete = JS(
-      "function(settings, json) {",
-      "$(this.api().table().header()).css({
-      'background-color': '#B52730', 
-      'color': '#fff'});","}"),
-    width = '100%',
-    align = 'center'
-    ))
-```
-:::
-
-::: {.card title="4T21"}
-```{r}
-liq_periodo_01 <- ind_liquidez %>%
-  filter(PERIODO == "4T21") %>%
-  select(-PERIODO)
-
-  
-DT::datatable(
-  liq_periodo_01, 
-  rownames = F,
-  options = list(
-    initComplete = JS(
-      "function(settings, json) {",
-      "$(this.api().table().header()).css({
-      'background-color': '#B52730', 
-      'color': '#fff'});","}"),
-    width = '100%',
-    align = 'center'
-    ))
-```
-:::
-
-::: {.card title="3T21"}
-```{r}
-liq_periodo_01 <- ind_liquidez %>%
-  filter(PERIODO == "3T21") %>%
-  select(-PERIODO)
-
-  
-DT::datatable(
-  liq_periodo_01, 
-  rownames = F,
-  options = list(
-    initComplete = JS(
-      "function(settings, json) {",
-      "$(this.api().table().header()).css({
-      'background-color': '#B52730', 
-      'color': '#fff'});","}"),
-    width = '100%',
-    align = 'center'
-    ))
-```
-:::
-
-::: {.card title="2T21"}
-```{r}
-liq_periodo_01 <- ind_liquidez %>%
-  filter(PERIODO == "2T21") %>%
-  select(-PERIODO)
-
-  
-DT::datatable(
-  liq_periodo_01, 
-  rownames = F,
-  options = list(
-    initComplete = JS(
-      "function(settings, json) {",
-      "$(this.api().table().header()).css({
-      'background-color': '#B52730', 
-      'color': '#fff'});","}"),
-    width = '100%',
-    align = 'center'
-    ))
-```
-:::
-
-::: {.card title="1T21"}
-```{r}
-liq_periodo_01 <- ind_liquidez %>%
-  filter(PERIODO == "1T21") %>%
-  select(-PERIODO)
-
-  
-DT::datatable(
-  liq_periodo_01, 
-  rownames = F,
-  editable = T,
-  options = list(
-    initComplete = JS(
-      "function(settings, json) {",
-      "$(this.api().table().header()).css({
-      'background-color': '#B52730', 
-      'color': '#fff'});","}"),
-    width = '100%',
-    align = 'center'
-    ))
-```
-:::
-
-::: {.card title="4T20"}
-```{r}
-liq_periodo_01 <- ind_liquidez %>%
-  filter(PERIODO == "4T20") %>%
-  select(-PERIODO)
-
-  
-DT::datatable(
-  liq_periodo_01, 
-  rownames = F,
-  editable = T,
-  options = list(
-    initComplete = JS(
-      "function(settings, json) {",
-      "$(this.api().table().header()).css({
-      'background-color': '#B52730', 
-      'color': '#fff'});","}"),
-    width = '100%',
-    align = 'center'
-    ))
-```
-:::
-::: {.card title="3T20"}
-```{r}
-liq_periodo_01 <- ind_liquidez %>%
-  filter(PERIODO == "3T20") %>%
-  select(-PERIODO)
-
-  
-DT::datatable(
-  liq_periodo_01, 
-  rownames = F,
-  editable = T,
-  options = list(
-    initComplete = JS(
-      "function(settings, json) {",
-      "$(this.api().table().header()).css({
-      'background-color': '#B52730', 
-      'color': '#fff'});","}"),
-    width = '100%',
-    align = 'center'
-    ))
-```
-:::
-
-::: {.card title="2T20"}
-```{r}
-liq_periodo_01 <- ind_liquidez %>%
-  filter(PERIODO == "2T20") %>%
-  select(-PERIODO)
-
-  
-DT::datatable(
-  liq_periodo_01, 
-  rownames = F,
-  editable = T,
-  options = list(
-    initComplete = JS(
-      "function(settings, json) {",
-      "$(this.api().table().header()).css({
-      'background-color': '#B52730', 
-      'color': '#fff'});","}"),
-    width = '100%',
-    align = 'center'
-    ))
-```
-:::
-
-::: {.card title="1T20"}
-```{r}
-liq_periodo_01 <- ind_liquidez %>%
-  filter(PERIODO == "1T20") %>%
-  select(-PERIODO)
-
-  
-DT::datatable(
-  liq_periodo_01, 
-  rownames = F,
-  editable = T,
-  options = list(
-    initComplete = JS(
-      "function(settings, json) {",
-      "$(this.api().table().header()).css({
-      'background-color': '#B52730', 
-      'color': '#fff'});","}"),
-    dom = 'Bfrtip',
-    buttons = c('copy', 'csv', 'excel', 'pdf', 'print'))
-)
-```
-:::
-
-
 

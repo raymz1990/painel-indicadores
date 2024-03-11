@@ -10,7 +10,7 @@ engine: knitr
 
 ```{r}
 #| include: false
-source("./data/CVM/R/06_Indicadores.R")
+source("./data/CVM/R/07_Indicadores.R")
 
 p <- ggplot() + geom_blank() + theme_dark()
 ```
@@ -614,3 +614,5 @@ for (itop in head(letters)) {
 
 
 {{< include 01_painel1.qmd >}}
+
+{{< include 02_painel.qmd >}}
