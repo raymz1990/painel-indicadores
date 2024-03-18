@@ -30,9 +30,6 @@ BP2 <- BP %>%
 # Combinando o novo dataframe com o antigo:
 BP <- bind_rows(BP, BP2)
 
-# Filtrando somente os trimestres
-BP <- filter(BP, grepl("t", PERIODO, ignore.case = TRUE))
-
 ## Salvando a estrutura das DFs, para consulta
 
 ### PERIODOS (verificar)
@@ -60,25 +57,76 @@ struct_empresas <- BP %>%
   arrange(EMPRESA)
 
 ### BP
-struc_BP <- unique(select(BP, CD_CONTA, CONTA))
-colnames(BP)
-
-BP <- select(BP, CD_CVM, EMPRESA, CD_CONTA, PERIODO, VL_CONTA) %>% 
-  # será mantido o CD_CVM para criar um ID junto com o PERIODO
-  filter(VL_CONTA != 0) %>%
-  arrange(CD_CONTA) %>%
-  pivot_wider(names_from = CD_CONTA, values_from = VL_CONTA) %>%
-  replace(is.na(.), 0)
+# struc_BP <- unique(select(BP, CD_CONTA, CONTA))
+# colnames(BP)
+# 
+# BP <- select(BP, CD_CVM, EMPRESA, CD_CONTA, PERIODO, VL_CONTA) %>% 
+#   # será mantido o CD_CVM para criar um ID junto com o PERIODO
+#   filter(VL_CONTA != 0) %>%
+#   arrange(CD_CONTA) %>%
+#   pivot_wider(names_from = CD_CONTA, values_from = VL_CONTA) %>%
+#   replace(is.na(.), 0)
 
 ### DRE
 struc_DRE <- unique(select(DRE, CD_CONTA, CONTA))
 colnames(DRE)
 # DRE <- select(DRE, EMPRESA, CD_CONTA, PERIODO, VL_CONTA)
 
-DRE <- select(DRE, CD_CVM, EMPRESA, CD_CONTA, PERIODO, VL_CONTA) %>% 
-  # será mantido o CD_CVM para criar um ID junto com o PERIODO
+# DRE <- select(DRE, CD_CVM, EMPRESA, CD_CONTA, PERIODO, VL_CONTA) %>% 
+#   # será mantido o CD_CVM para criar um ID junto com o PERIODO
+#   filter(VL_CONTA != 0) %>%
+#   arrange(CD_CONTA) %>%
+#   pivot_wider(names_from = CD_CONTA, values_from = VL_CONTA) %>%
+#   replace(is.na(.), 0)
+
+# Filtrando somente os trimestres
+BP_trim <- filter(BP, grepl("t", PERIODO, ignore.case = TRUE))
+
+# BP_trim <- select(BP_trim, CD_CVM, EMPRESA, CD_CONTA, PERIODO, VL_CONTA) %>%
+#   # será mantido o CD_CVM para criar um ID junto com o PERIODO
+#   filter(VL_CONTA != 0) %>%
+#   arrange(CD_CONTA) %>%
+#   pivot_wider(names_from = CD_CONTA, values_from = VL_CONTA) %>%
+#   replace(is.na(.), 0)
+
+# Filtrando somente os semestres
+BP_sem <- filter(BP, grepl("s", PERIODO, ignore.case = TRUE))
+
+BP_sem <- select(BP_sem, CD_CVM, EMPRESA, CD_CONTA, PERIODO, VL_CONTA) %>%
   filter(VL_CONTA != 0) %>%
   arrange(CD_CONTA) %>%
   pivot_wider(names_from = CD_CONTA, values_from = VL_CONTA) %>%
   replace(is.na(.), 0)
 
+# Filtrando somente os 9meses
+BP_9m <- filter(BP, grepl("9m", PERIODO, ignore.case = TRUE))
+
+BP_9m <- select(BP_9m, CD_CVM, EMPRESA, CD_CONTA, PERIODO, VL_CONTA) %>%
+  filter(VL_CONTA != 0) %>%
+  arrange(CD_CONTA) %>%
+  pivot_wider(names_from = CD_CONTA, values_from = VL_CONTA) %>%
+  replace(is.na(.), 0)
+
+# Filtrando somente os anos
+BP_ano <- filter(BP, grepl("202", PERIODO, ignore.case = TRUE))
+
+BP_ano <- select(BP_ano, CD_CVM, EMPRESA, CD_CONTA, PERIODO, VL_CONTA) %>%
+  filter(VL_CONTA != 0) %>%
+  arrange(CD_CONTA) %>%
+  pivot_wider(names_from = CD_CONTA, values_from = VL_CONTA) %>%
+  replace(is.na(.), 0)
+
+# Filtrando somente os trimestres
+DRE_trim <- filter(DRE, grepl("t", PERIODO, ignore.case = TRUE))
+# Filtrando somente os semestres
+DRE_sem <- filter(DRE, grepl("s", PERIODO, ignore.case = TRUE))
+# Filtrando somente os 9meses
+DRE_9m <- filter(DRE, grepl("9m", PERIODO, ignore.case = TRUE))
+# Filtrando somente os anos
+DRE_ano <- filter(DRE, grepl("202", PERIODO, ignore.case = TRUE))
+
+DRE_ano <- select(DRE_ano, CD_CVM, EMPRESA, CD_CONTA, PERIODO, VL_CONTA) %>% 
+  filter(VL_CONTA != 0) %>%
+  arrange(CD_CONTA) %>%
+  pivot_wider(names_from = CD_CONTA, values_from = VL_CONTA) %>%
+  replace(is.na(.), 0)

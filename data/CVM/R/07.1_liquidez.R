@@ -2,14 +2,14 @@
 source("./data/CVM/R/06_Estrutura.R")
 
 # LIQUIDEZ
-ind_liquidez <- BP[c("CD_CVM", "EMPRESA", "PERIODO",
-                     "1.01",
-                     "1.01.01",
-                     "1.01.02",
-                     "1.01.04",
-                     "1.02.01",
-                     "2.01",
-                     "2.02")]
+ind_liquidez <- BP_ano[c("CD_CVM", "EMPRESA", "PERIODO",
+                         "1.01",
+                         "1.01.01",
+                         "1.01.02",
+                         "1.01.04",
+                         "1.02.01",
+                         "2.01",
+                         "2.02")]
 
 # Calcular as colunas de liquidez
 ind_liquidez$liq_geral <- round((ind_liquidez$`1.01` + ind_liquidez$`1.02.01`) / (ind_liquidez$`2.01` + ind_liquidez$`2.02`), 2)

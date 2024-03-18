@@ -64,7 +64,7 @@ dir_DFC_MD <- file.path("./data/CVM/Dados_CVM/DemonstracoesFinanceiras/DFC_MD")
 dir_DFC_MI <- file.path("./data/CVM/Dados_CVM/DemonstracoesFinanceiras/DFC_MI")
 dir_DMPL <- file.path("./data/CVM/Dados_CVM/DemonstracoesFinanceiras/DMPL")
 #dir_DRA <- file.path("./data/CVM/Dados_CVM/DemonstracoesFinanceiras/DRA")
-dir_DRE <- file.path("./data/CVM/Dados_CVM/DemonstracoesFinanceiras/DRE")
+
 dir_DVA <- file.path("./data/CVM/Dados_CVM/DemonstracoesFinanceiras/DVA")
 
 # obter a lista de nomes de arquivos em cada diretório
@@ -72,7 +72,7 @@ arquivos_DFC_MD <- list.files(dir_DFC_MD, pattern = "\\.csv$")
 arquivos_DFC_MI <- list.files(dir_DFC_MI, pattern = "\\.csv$")
 arquivos_DMPL <- list.files(dir_DMPL, pattern = "\\.csv$")
 #arquivos_DRA <- list.files(dir_DRA, pattern = "\\.csv$")
-arquivos_DRE <- list.files(dir_DRE, pattern = "\\.csv$")
+
 arquivos_DVA <- list.files(dir_DVA, pattern = "\\.csv$")
 
 # inicializar listas para armazenar os data frames
@@ -80,7 +80,7 @@ lista_DFC_MD <- list()
 lista_DFC_MI <- list()
 lista_DMPL <- list()
 #lista_DRA <- list()
-lista_DRE <- list()
+
 lista_DVA <- list()
 
 # loop através dos arquivos em cada diretório e ler cada um com read.csv
@@ -106,11 +106,7 @@ for (arquivo in arquivos_DMPL) {
 #  df <- read.csv(caminho_arquivo, sep = ";", fileEncoding = "ISO-8859-1", stringsAsFactors = FALSE)
 #  lista_DRA[[arquivo]] <- df
 #}
-for (arquivo in arquivos_DRE) {
-  caminho_arquivo <- file.path(dir_DRE, arquivo)
-  df <- read.csv(caminho_arquivo, sep = ";", fileEncoding = "ISO-8859-1", stringsAsFactors = FALSE)
-  lista_DRE[[arquivo]] <- df
-}
+
 for (arquivo in arquivos_DVA) {
   caminho_arquivo <- file.path(dir_DVA, arquivo)
   df <- read.csv(caminho_arquivo, sep = ";", fileEncoding = "ISO-8859-1", stringsAsFactors = FALSE)
@@ -121,7 +117,7 @@ for (arquivo in arquivos_DVA) {
 DFC_MD <- do.call(rbind, lista_DFC_MD)
 DFC_MI <- do.call(rbind, lista_DFC_MI)
 #DRA <- do.call(rbind, lista_DRA)
-DRE <- do.call(rbind, lista_DRE)
+
 DVA <- do.call(rbind, lista_DVA)
 
        

@@ -5,7 +5,7 @@
 source("./data/CVM/R/07_Indicadores.R")
 
 #| include: false
-selected_quarter <- c("4T23")  # Defina o trimestre padrão
+selected_quarter <- c("2023")  # Defina o período
 
 
 ```
@@ -16,12 +16,9 @@ selected_quarter <- c("4T23")  # Defina o trimestre padrão
 //| panel: input
 
 viewof selected_quarter = Inputs.select(
-  ["4T23", "3T23", "2T23", "1T23",
-  "4T22", "3T22", "2T22", "1T22",
-  "4T21", "3T21", "2T21", "1T21",
-  "4T20", "3T20", "2T20", "1T20"], 
-  { value: "4T23", 
-    label: "Trimestre:"
+  ["2023", "2022", "2021", "2020"], 
+  { value: "2023", 
+    label: "Período:"
   }
 )
 
@@ -40,13 +37,13 @@ viewof selected_quarter = Inputs.select(
 library(DT)
 
 # Filtre os indicadores com base no trimestre selecionado
-filtered_indicators <- indicadores[indicadores$PERIODO == selected_quarter, ]
+filtered_indicators <- indicadores[indicadores$PERIODO.x == selected_quarter, ]
 
 # Criando a tabela indicadores filtrados
 datatable(
   filtered_indicators %>%
-    select(Empresa = EMPRESA, 
-           Período = PERIODO, 
+    select(Empresa = EMPRESA.x, 
+           Período = PERIODO.x, 
            `Liquidez Geral` = liq_geral, 
            `Liquidez Corrente` = liq_corrente, 
            `Liquidez Seca` = liq_seca, 
@@ -64,3 +61,35 @@ datatable(
 
 ```
 
+### Second row {height="70%"}
+
+#### Row {.tabset}
+
+```{r}
+#| title: INDICADORES DE LUCRATIVIDADE
+
+library(DT)
+
+# Filtre os indicadores com base no trimestre selecionado
+filtered_indicators <- indicadores[indicadores$PERIODO.x == selected_quarter, ]
+
+# Criando a tabela indicadores filtrados
+datatable(
+  filtered_indicators %>%
+    select(Empresa = EMPRESA.x, 
+           Período = PERIODO.x, 
+           `Margem Bruta` = margem_bruta, 
+           `Margem EBIT` = margem_ebit, 
+           `Margem Líquida` = margem_liquida), 
+  extensions = 'FixedHeader',
+  rownames = FALSE,
+  options = list(
+    pageLength = 10,
+    width = '100%',
+    align = 'center'
+  )
+)
+
+
+
+```

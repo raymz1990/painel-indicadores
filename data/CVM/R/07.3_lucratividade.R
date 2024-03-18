@@ -2,15 +2,15 @@
 source("./data/CVM/R/06_Estrutura.R")
 
 # LIQUIDEZ
-ind_lucratividade <- DRE[c("CD_CVM", "EMPRESA", "PERIODO",
-                     "3.01", # ROL
-                     "3.02", # Custos
-                     "3.03", # Lucro Bruto
-                     "3.04", # Despesas Operacionais
-                     "3.05", # EBIT
-                     "3.06", # Resultado Financeiro
-                     "3.07", # Resultado antes lucros
-                     "3.11")] # Lucro Liquido
+ind_lucratividade <- DRE_ano[c("CD_CVM", "EMPRESA", "PERIODO",
+                               "3.01", # ROL
+                               "3.02", # Custos
+                               "3.03", # Lucro Bruto
+                               "3.04", # Despesas Operacionais
+                               "3.05", # EBIT
+                               "3.06", # Resultado Financeiro
+                               "3.07", # Resultado antes lucros
+                               "3.11")] # Lucro Liquido
 
 # Calcular as colunas de lucratividade
 ind_lucratividade$margem_bruta <- 
