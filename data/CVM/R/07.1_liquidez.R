@@ -21,6 +21,8 @@ colnames(ind_liquidez)
 ind_liquidez <- select(ind_liquidez, CD_CVM, EMPRESA, PERIODO,
                        liq_geral, liq_corrente, liq_seca, liq_seca, liq_imediata)
 
-ind_liquidez$ID <- paste0(ind_liquidez$CD_CVM, " - ", ind_liquidez$EMPRESA)
+ind_liquidez$ID <- paste0(ind_liquidez$CD_CVM, " - ",
+                          ind_liquidez$EMPRESA, " - ",
+                          ind_liquidez$PERIODO)
 
 

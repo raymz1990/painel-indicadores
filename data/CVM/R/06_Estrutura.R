@@ -75,3 +75,10 @@ struc_DRE <- unique(select(DRE, CD_CONTA, CONTA))
 colnames(DRE)
 # DRE <- select(DRE, EMPRESA, CD_CONTA, PERIODO, VL_CONTA)
 
+DRE <- select(DRE, CD_CVM, EMPRESA, CD_CONTA, PERIODO, VL_CONTA) %>% 
+  # será mantido o CD_CVM para criar um ID junto com o PERIODO
+  filter(VL_CONTA != 0) %>%
+  arrange(CD_CONTA) %>%
+  pivot_wider(names_from = CD_CONTA, values_from = VL_CONTA) %>%
+  replace(is.na(.), 0)
+

@@ -2,6 +2,8 @@ project:
   type: website
   title: Painel de Indicadores
   output-dir: docs
+  resources: 
+  - shinylive-sw.js
 
 website:
   navbar:

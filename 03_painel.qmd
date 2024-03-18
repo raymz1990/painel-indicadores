@@ -1,0 +1,66 @@
+# Indicadores
+
+```{r}
+#| include: false
+source("./data/CVM/R/07_Indicadores.R")
+
+#| include: false
+selected_quarter <- c("4T23")  # Defina o trimestre padrão
+
+
+```
+
+## {.sidebar}
+
+```{ojs}
+//| panel: input
+
+viewof selected_quarter = Inputs.select(
+  ["4T23", "3T23", "2T23", "1T23",
+  "4T22", "3T22", "2T22", "1T22",
+  "4T21", "3T21", "2T21", "1T21",
+  "4T20", "3T20", "2T20", "1T20"], 
+  { value: "4T23", 
+    label: "Trimestre:"
+  }
+)
+
+
+```
+
+## Main Body
+
+### First row {height="70%"}
+
+#### Row {.tabset}
+
+```{r}
+#| title: INDICADORES DE LIQUIDEZ
+
+library(DT)
+
+# Filtre os indicadores com base no trimestre selecionado
+filtered_indicators <- indicadores[indicadores$PERIODO == selected_quarter, ]
+
+# Criando a tabela indicadores filtrados
+datatable(
+  filtered_indicators %>%
+    select(Empresa = EMPRESA, 
+           Período = PERIODO, 
+           `Liquidez Geral` = liq_geral, 
+           `Liquidez Corrente` = liq_corrente, 
+           `Liquidez Seca` = liq_seca, 
+           `Liquidez Imediata` = liq_imediata), 
+  extensions = 'FixedHeader',
+  rownames = FALSE,
+  options = list(
+    pageLength = 10,
+    width = '100%',
+    align = 'center'
+  )
+)
+
+
+
+```
+

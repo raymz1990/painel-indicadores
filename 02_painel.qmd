@@ -14,7 +14,6 @@ library(reactable)
 #| include: false
 source("./data/CVM/R/07_Indicadores.R")
 
-p <- ggplot() + geom_blank() + theme_dark()
 ```
 
 ## {.sidebar}
