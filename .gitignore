@@ -1,8 +1,18 @@
+# Dados sensíveis
+*.zip
+*.csv
+*.rds
+*.xlsx
+
+# Arquivos do R
 .Rproj.user
 .Rhistory
 .RData
-.Ruserdata
 
-data/CVM/Dados_CVM/
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
 
-/.quarto/
+# Logs e temporários
+*.log
+*.tmp
